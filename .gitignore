@@ -1,0 +1,40 @@
+# ===============================
+# Sweety Seelam Portfolio Website
+# ===============================
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Build and cache folders
+node_modules/
+__pycache__/
+.cache/
+dist/
+build/
+temp/
+.env
+.env.local
+
+# OS and IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# Deployment / Hosting
+.vercel
+.netlify
+gh-pages/
+*.zip
+*.bak
+
+# Images/Exports (optional to ignore large raw files)
+assets/images/raw/
+assets/images/originals/
+
+# Streamlit or local app caches (if reused)
+.streamlit/
+.streamlit_cache/
