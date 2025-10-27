@@ -1,18 +1,42 @@
-const educationData = [
-  {
-    degree: "Executive Master's in Data Science",
-    institution: "University of the Cumberlands",
-    time: "2024 – Present",
-    details: "Advanced learning in machine learning, statistical analysis, data engineering, and business analytics tailored for executive decision-making roles."
-  },
+document.addEventListener("DOMContentLoaded", () => {
+  const eduTarget = document.querySelector("[data-education-target]");
+  const certTarget = document.querySelector("[data-cert-target]");
 
+  const degrees = [
+    {
+      title: "Executive Master’s in Data Science",
+      school: "University of the Cumberlands",
+      years: "2024 – 2026",
+      meta: "Specialization in Machine Learning and AI"
+    },
+    {
+      title: "Executive MBA in Business Data Analytics",
+      school: "Ottawa University",
+      years: "2022 – 2024",
+      meta: "Focus on Business Intelligence and Strategic Analytics"
+    }
+  ];
 
-  {
-    degree: "Executive MBA in Business Data Analytics",
-    institution: "Ottawa University",
-    time: "2022 – 2024",
-    details: "Focused on data-driven business strategy, predictive analytics, and leadership in technical domains to drive revenue and growth."
-  }
-];
+  const certs = [
+    { name: "Microsoft Power BI Data Analyst" },
+    { name: "Tableau Business Intelligence Analyst" }
+  ];
 
-export default educationData;
+  degrees.forEach(d => {
+    const item = document.createElement("div");
+    item.className = "timeline-item";
+    item.innerHTML = `
+      <h3>${d.title}</h3>
+      <p class="meta">${d.school} · ${d.years}</p>
+      <p>${d.meta}</p>
+    `;
+    eduTarget.appendChild(item);
+  });
+
+  certs.forEach(c => {
+    const card = document.createElement("div");
+    card.className = "cert-card";
+    card.innerHTML = `<h4>${c.name}</h4>`;
+    certTarget.appendChild(card);
+  });
+});

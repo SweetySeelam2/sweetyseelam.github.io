@@ -1,20 +1,25 @@
-window.onload = function () {
-  const favicon = document.getElementById('favicon')
-  const pageTitle = document.title
-  const attentionMessage = 'Please visit again'
+/* dynamicTitle.js — safe rotating words, no truncation */
+(function () {
+  const el = document.querySelector(".animated-text");
+  if (!el) return;
 
-  document.addEventListener('visibilitychange', function (e) {
-    const isPageActive = !document.hidden
-    toggle(isPageActive)
-  })
-
-  function toggle(isPageActive) {
-    if (isPageActive) {
-      document.title = pageTitle
-      favicon.href = './assets/images/dp_male.svg'
-    } else {
-      document.title = attentionMessage
-      favicon.href = './assets/images/folded.png'
-    }
+  // words can come from data-words="a, b, c" or child spans
+  let words = [];
+  const attr = el.getAttribute("data-words");
+  if (attr) words = attr.split(",").map(s => s.trim()).filter(Boolean);
+  if (!words.length) {
+    words = [...el.querySelectorAll("span")].map(s => s.textContent.trim());
   }
-}
+  if (!words.length) {
+    el.textContent = ""; // nothing to rotate
+    return;
+  }
+
+  let i = 0;
+  const render = () => {
+    el.textContent = words[i % words.length];
+    i++;
+  };
+  render();
+  setInterval(render, 2200); // rotate every ~2.2s
+})();
