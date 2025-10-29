@@ -1,0 +1,54 @@
+/* PATH: assets/css/experience.css */
+
+/* spacing/centering now that the avatar image is removed */
+.hero {
+  text-align: center;
+  padding: 48px 0 16px;
+}
+.hero .subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* experience list */
+#experience-list { 
+  list-style: none; 
+  padding-left: 0; 
+  margin: 0;
+}
+
+/* timeline cards */
+.exp-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 8px 0;
+}
+.exp-card h3 { 
+  margin: 2px 0 4px; 
+}
+.exp-card .org { 
+  color: var(--muted); 
+  font-weight: 600; 
+}
+.exp-card .period, 
+.exp-card .location { 
+  color: var(--muted); 
+  font-size: 14px; 
+}
+.exp-card ul { 
+  margin: 8px 0 0 18px; 
+}
+
+/* slight pull-up so the timeline dot (if any from main.css) aligns nicely */
+.timeline-item .exp-card { 
+  margin-top: -6px; 
+}
+
+/* (Optional) Remove any legacy avatar circle styles if they existed */
+.page-hero-avatar, 
+.page-hero-avatar img, 
+.avatar { 
+  display: none !important; 
+}

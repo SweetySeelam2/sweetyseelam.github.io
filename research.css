@@ -1,0 +1,25 @@
+.section {
+  padding: 80px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: #121212;
+  border-radius: 12px;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.card h3 {
+  color: #ff6f61;
+}
+.card p {
+  line-height: 1.5;
+}
+.card a {
+  color: #00bfff;
+  text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+/* PATH: assets/css/app.css */
+
+/* Shared layout helpers */
+.stack { display:flex; flex-direction:column; gap:12px; }
+.row { display:flex; gap:12px; align-items:center; }
+.wrap { flex-wrap: wrap; }
+
+/* Pills / tags */
+.pill {
+  display:inline-block; padding: 4px 10px; border-radius:999px;
+  border:1px solid var(--border); background:var(--surface); color:var(--muted);
+  font-size: 13px; line-height:1;
+}
+
+/* Experience timeline base (used in experience.css too) */
+.timeline{ position:relative; }
+.timeline::before{
+  content:""; position:absolute; left:24px; top:0; bottom:0; width:2px; background:var(--border);
+}
+.timeline-item{ position:relative; padding-left:56px; margin: 20px 0; }
+.timeline-item::marker{ content:none; }
+.timeline-dot{
+  position:absolute; left:16px; top:10px; width:16px; height:16px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 0 4px rgba(225,29,72,.1);
+}
+
+/* Project cards baseline */
+.project-card .meta { display:flex; flex-wrap:wrap; gap:8px; }
+.project-card h3 { margin-top: 6px; }
+
+/* Navbar spacing fix for fixed-top Bootstrap nav */
+body { scroll-padding-top: 72px; }

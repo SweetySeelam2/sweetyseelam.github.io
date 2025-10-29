@@ -1,0 +1,5 @@
+/* PATH: assets/css/project.css */
+
+.project-card .meta { color: var(--muted); }
+.project-card p { margin-top: 8px; }
+.project-card .actions { margin-top: 10px; }

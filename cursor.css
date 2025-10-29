@@ -1,0 +1,17 @@
+/* PATH: assets/css/cursor.css */
+
+.cursor-dot, .cursor-dot-outline {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 6px; height: 6px; background: var(--accent);
+}
+
+.cursor-dot-outline {
+  width: 28px; height: 28px; border: 1px solid rgba(225,29,72,.45);
+}
