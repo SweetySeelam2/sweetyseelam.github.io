@@ -1,31 +1,17 @@
-html,
-html *,
-body,
-body * {
-  cursor: none;
-}
+/* PATH: assets/css/cursor.css */
 
-.cursor-dot,
-.cursor-dot-outline {
-  pointer-events: none;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.cursor-dot, .cursor-dot-outline {
+  position: fixed;
   border-radius: 50%;
-  opacity: 0;
+  pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 9999;
 }
 
 .cursor-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #b83030f1;
+  width: 6px; height: 6px; background: var(--accent);
 }
 
 .cursor-dot-outline {
-  width: 20px;
-  height: 20px;
-  background-color: rgba(211, 115, 115, 0.959);
+  width: 28px; height: 28px; border: 1px solid rgba(225,29,72,.45);
 }

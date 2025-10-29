@@ -1,0 +1,113 @@
+/* PATH: assets/css/main.css */
+/* ====== Base Theme ====== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap');
+
+:root{
+  --bg: #0b0f19;
+  --text: #e7e9ee;
+  --muted: #a0a8b5;
+  --card: #111625;
+  --surface: #151b2b;
+  --border: #1f2435;
+  --accent: #e11d48; /* primary */
+  --radius: 16px;
+  --shadow: 0 18px 50px rgba(0,0,0,.35);
+
+  /* sizing helpers */
+  --container: 1100px;
+}
+
+*{ box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+  background: radial-gradient(1200px 700px at 10% -10%, #162036 0%, #0b0f19 52%) fixed;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.container{
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+
+/* ====== Nav (if not using Bootstrap) ====== */
+.nav{
+  position: sticky; top: 0; z-index: 60;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,25,.7);
+  border-bottom: 1px solid var(--border);
+}
+.nav .container{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+.nav a{ color: var(--muted); text-decoration:none; padding:8px 12px; border-radius:12px; }
+.nav a:hover{ color: var(--text); background: var(--surface); }
+
+/* ====== Typography ====== */
+h1{ font-family:Poppins, Inter, sans-serif; font-weight:700; font-size: clamp(28px, 4vw, 42px); line-height:1.15; margin: 0 0 10px; }
+h2{ font-family:Poppins, Inter, sans-serif; font-weight:700; font-size: clamp(22px, 3.2vw, 32px); margin: 0 0 10px; }
+h3{ font-weight:700; font-size: clamp(18px, 2.4vw, 22px); margin: 8px 0 6px; }
+p, li{ font-size: clamp(16px, 2.1vw, 18px); color: var(--text); }
+
+/* ====== Buttons ====== */
+.btn{
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text); text-decoration:none; font-weight:600;
+  padding: 10px 16px; border-radius: 12px; transition: transform .15s, background .2s;
+  display:inline-flex; align-items:center; gap:8px;
+}
+.btn:hover{ transform: translateY(-1px); background: #1a2033; }
+.btn--primary{ background: linear-gradient(135deg, var(--accent), #f43f5e); border:none; }
+
+/* ====== Sections & Cards ====== */
+.section{ padding: clamp(48px, 8vw, 80px) 0; }
+.section__desc{ color: var(--muted); margin-bottom: 28px; }
+
+.grid{
+  display:grid; gap:18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card{
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px; box-shadow:none;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.card:hover{ transform: translateY(-4px); box-shadow: var(--shadow); border-color: #273149; }
+.card .meta{ color: var(--muted); margin-bottom: 6px; }
+.card .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+
+/* ====== Images in cards ====== */
+.card img{
+  width:100%; height:180px; object-fit:cover; object-position:center;
+  border-radius: 12px; margin-bottom: 10px; border: 1px solid var(--border);
+}
+
+/* ====== Hero ====== */
+.hero{ padding: clamp(64px, 10vw, 120px) 0 48px; text-align:center; position:relative; z-index: 1; }
+.hero .avatar{
+  width: clamp(140px, 14vw, 200px);
+  height: clamp(140px, 14vw, 200px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;   /* change to 'top center' if your photo needs */
+  border: 3px solid var(--accent);
+  box-shadow: var(--shadow);
+  display:block; margin: 0 auto 16px;
+}
+.hero .subtitle{
+  color: var(--muted);
+  max-width: 780px; margin: 0 auto 20px;
+}
+.btns{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* ====== Footer ====== */
+footer{ border-top:1px solid var(--border); padding:28px 0; color:var(--muted); text-align:center; }
+
+/* ====== Utilities ====== */
+.muted{ color: var(--muted); }
+.center{ text-align:center; }
+
+/* ====== Mobile ====== */
+@media (max-width: 720px){
+  .nav .links{ display:none; }
+}
