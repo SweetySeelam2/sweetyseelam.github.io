@@ -1,17 +1,23 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" light-mode="dark">
 <head>
-  <meta charset="utf-8" />
-  <title>Sweety Seelam · Data Scientist / ML Engineer</title>
+  <meta charset="UTF-8" />
+  <title>Sweety Seelam | Data Scientist / ML Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="assets/css/home.css" rel="stylesheet" />
-  <link href="assets/css/main.css" rel="stylesheet" />
-  <link rel="icon" href="assets/icons/favicon.ico" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/cursor.css" />
 </head>
-<body class="theme-dark">
-  <!-- NAV -->
+<body class="no-scroll-preload">
+
+  <!-- Top nav -->
   <header class="site-header">
-    <div class="container nav-wrap">
+    <div class="container">
       <a class="brand" href="index.html">Sweety Seelam</a>
       <nav class="main-nav">
         <a href="projects.html">Projects</a>
@@ -20,102 +26,109 @@
         <a href="education.html">Education</a>
         <a href="techstack.html">Tech Stack</a>
         <a href="design.html">Gallery</a>
-        <a href="license.html">License</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container hero-inner">
-      <img class="avatar" src="assets/images/home/dp_female.svg" alt="Sweety Seelam" />
+      <!-- Perfect circular avatar with true center crop -->
+      <div class="avatar">
+        <!-- 👇 leave this path as-is; just drop your image at assets/images/home/profile.jpg -->
+        <img src="assets/images/home/profile.jpg" alt="Sweety Seelam" />
+      </div>
+
       <h1>Data Scientist / ML Engineer</h1>
-      <p class="lede">
-        I design A/B testing frameworks, build explainable ML & LLM systems, and ship decision-ready
-        dashboards. 20% faster experiment deployments · 5–7% engagement lift · 50% less reporting time (300+ hrs/yr).
+      <p class="subtitle">
+        I design A/B testing frameworks, build explainable ML & LLM systems, and ship decision-ready dashboards.
+        20% faster experiment deployments · 5–7% engagement lift · 50% less reporting time (300+ hrs/yr).
       </p>
 
-      <div class="cta-row">
+      <div class="hero-actions">
+        <!-- 👇 This opens/downloads the PDF you placed in /assets/docs -->
         <a class="btn primary" href="assets/docs/Sweety_Seelam_Resume_2025.pdf" download>Download Résumé</a>
         <a class="btn" href="https://github.com/SweetySeelam2" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/sweetyrao670/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://share.streamlit.io/user/sweetyseelam2" target="_blank" rel="noopener">Streamlit</a>
         <a class="btn" href="https://medium.com/@sweetyseelam" target="_blank" rel="noopener">Medium</a>
+        <a class="btn" href="https://share.streamlit.io/user/sweetyseelam2" target="_blank" rel="noopener">Streamlit</a>
+        <a class="btn" href="projects.html">Projects</a>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about">
+  <!-- About (expanded & detailed) -->
+  <section class="section">
     <div class="container">
       <h2>About</h2>
-      <p>
-        Business Analyst & Aspiring Data Scientist with 5+ years of experience designing large-scale
-        experiments, developing predictive & generative AI models, and turning insights into strategy.
-        I’ve delivered measurable impact at Amazon and through global AI competitions (Kaggle, Devpost).
-        Specialties include A/B testing, causal inference, applied ML, explainable AI (SHAP/LIME), and
-        LLM applications. Currently pursuing an Executive Master’s in Data Science (ML/AI focus).
+
+      <p class="about-blurb">
+        Business Analyst and an aspiring Data Scientist with 5+ years of experience across Amazon and consulting—working at the
+        intersection of product experimentation, causal inference, and production ML. I turn ambiguous problems into measurable
+        hypotheses, build robust data/feature pipelines, and ship models and dashboards that drive real decisions for
+        non-technical stakeholders.
       </p>
-      <p>
-        <strong>Highlights:</strong> 20% faster experiment deployments · 5–7% engagement lift ·
-        $1.2M+ CLV impact from churn/fraud models · 50% reporting time reduction via Python+SQL pipelines ·
-        LLM Retrieve–Rank–Explain recommender (Phi-2/Llama-3) deployed on Hugging Face · dashboards in
-        Tableau/Power BI accelerating executive decisions by 20%.
+
+      <p class="about-blurb">
+        My current focus is on explainable, trustworthy AI: LLM-augmented recommenders (retrieve → rank → explain), model
+        monitoring with human-in-the-loop feedback, and experimentation at scale (A/B, CUPED, uplift modeling). I’m also
+        completing an Executive Master’s in Data Science (ML & AI), blending academic rigor with pragmatic delivery—prioritizing
+        clarity, reproducibility, and business impact.
       </p>
-      <p class="contact">
-        Michigan, USA · <a href="mailto:sweetyseelam8@gmail.com">sweetyseelam8@gmail.com</a> ·
-        <a href="https://sweetyseelam2.github.io" target="_blank" rel="noopener">Portfolio</a>
-      </p>
+
+      <ul class="about-list">
+        <li><strong>Experimentation Ops:</strong> Standardized A/B workflows → <em>20% faster</em> launches and stronger decision hygiene.</li>
+        <li><strong>Engagement Uplift:</strong> Delivered <em>5–7% lift</em> via ranking models + SHAP-guided iteration.</li>
+        <li><strong>Analytics Engineering:</strong> Cut reporting time by <em>50%</em> (300+ hrs/yr) through semantic layers & reusable metrics.</li>
+        <li><strong>Explainability:</strong> SHAP/LIME playbooks for PMs & execs; reduced “black-box” friction in go-to-market decisions.</li>
+        <li><strong>Tooling:</strong> Python, SQL, scikit-learn/XGBoost, TensorFlow/Keras, LangChain, Streamlit, dbt/BigQuery, Tableau/Power BI.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- FEATURED PROJECTS (home label changed) -->
-  <section class="featured">
+  <!-- Featured Projects -->
+  <section class="section">
     <div class="container">
       <h2>Featured Projects</h2>
-
       <div class="grid cards">
 
-        <!-- LLM Retrieve–Rank–Explain -->
         <article class="card">
-          <img src="assets/images/home/featured/llm-rec.jpg" alt="LLM Recommender" />
-          <h3>Retrieve–Rank–Explain Recommender (LLM + SHAP)</h3>
-          <p>Hybrid recommender combining embeddings + RandomForest ranking + SHAP with Phi-2/Llama-3 summaries.</p>
+          <img src="assets/images/home/featured/llm-rec.jpg" alt="LLM Retrieve–Rank–Explain Recommender" />
+          <h3>LLM Retrieve–Rank–Explain Recommender</h3>
+          <p>Hybrid recsys: embeddings → RF ranker + SHAP → LLM explanations.</p>
           <div class="actions">
-            <a class="btn" href="https://huggingface.co/spaces/sweetyseelam/llm-product-recommender" target="_blank" rel="noopener">Demo</a>
-            <a class="btn" href="https://github.com/SweetySeelam2/LLM_Recommendation_Amazon" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://github.com/SweetySeelam2/LLM-Recommendation-Amazon" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn primary" href="https://huggingface.co/spaces/sweetyseelam/llm-product-recommender" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
 
-        <!-- Fraud Detection -->
         <article class="card">
-          <img src="assets/images/home/featured/fraud.jpg" alt="Fraud Detection" />
-          <h3>Fraud Detection with Explainable AI</h3>
-          <p>XGBoost + SHAP Streamlit app for real-time risk scoring and executive insight.</p>
+          <img src="assets/images/home/featured/fraud.jpg" alt="Fraud Detection with SHAP" />
+          <h3>Fraud Detection + SHAP</h3>
+          <p>XGBoost + SHAP Streamlit app for real-time risk scoring.</p>
           <div class="actions">
-            <a class="btn" href="https://customer-segmentation-ml.streamlit.app/" target="_blank" rel="noopener">Demo</a>
             <a class="btn" href="https://github.com/SweetySeelam2/Fraud-Detection-Analytics" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn primary" href="https://customer-segmentation-ml.streamlit.app/" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
 
-        <!-- Netflix Revenue Predictor -->
         <article class="card">
-          <img src="assets/images/home/featured/netflix-roi.jpg" alt="Netflix ROI" />
-          <h3>Netflix Revenue Predictor (XGBoost + SHAP)</h3>
-          <p>End-to-end ROI forecasting with SHAP; Tableau/Streamlit dashboards for leaders.</p>
+          <img src="assets/images/home/featured/netflix-roi.jpg" alt="Netflix ROI Predictor" />
+          <h3>Netflix ROI Predictor</h3>
+          <p>Revenue modeling with SHAP + executive-ready dashboards.</p>
           <div class="actions">
-            <a class="btn" href="https://share.streamlit.io/user/sweetyseelam2" target="_blank" rel="noopener">Demo</a>
             <a class="btn" href="https://github.com/SweetySeelam2/Netflix-Revenue-Predictor" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn primary" href="#" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
 
-        <!-- CancelSense API (link fixed) -->
         <article class="card">
           <img src="assets/images/home/featured/cancelsense.jpg" alt="CancelSense API" />
-          <h3>CancelSense API (FastAPI + SHAP)</h3>
-          <p>Real-time flight delay/cancellation predictions; deployed on Railway.</p>
+          <h3>CancelSense API</h3>
+          <p>FastAPI + SHAP flight delay & cancellation predictions.</p>
           <div class="actions">
             <a class="btn" href="https://github.com/SweetySeelam2/RevenueCat-Shipaton" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Docs</a>
           </div>
         </article>
 
@@ -124,13 +137,12 @@
   </section>
 
   <footer class="site-footer">
-    <div class="container small">
-      © <span id="y"></span> Sweety Seelam · <a href="license.html">License</a>
-    </div>
+    <div class="container">&copy; 2025 Sweety Seelam</div>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/dynamicTitle.js"></script>
+  <script src="assets/js/cursor.js"></script>
 </body>
 </html>
