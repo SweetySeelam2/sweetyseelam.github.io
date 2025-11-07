@@ -1,57 +1,16 @@
-/* PATH: assets/css/cards.css */
+/* ===== cards.css — unified cards & grids ===== */
+.grid.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
 
-/* Baseline grid for cards across pages */
-.grid.cards {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1rem;
+  box-shadow:var(--shadow);
 }
-
-/* Card container */
-.card {
-  background: #11151c;
-  border: 1px solid #232a36;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+.card img{
+  width:100%;height:150px;object-fit:cover;border-radius:12px;margin-bottom:.6rem
 }
-
-/* Thumbnail image */
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* Text */
-.card h3 { margin: 12px 0 6px; }
-.card p  { color: #b7c0cc; min-height: 48px; }
-
-/* Actions */
-.card .actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid #2a3446;
-  text-decoration: none;
-}
-.btn.primary {
-  background: #fa2e66;
-  border-color: #fa2e66;
-  color: #fff;
-}
-
-/* Active nav highlight (optional) */
-.site-header .main-nav a.active,
-.nav .links a.active {
-  color: #fa2e66;
-}
+.card h3,.card h4{margin:.3rem 0}
+.card p{margin:.35rem 0 .6rem;color:#c9d2e1}
+.actions{display:flex;gap:.5rem;flex-wrap:wrap}
