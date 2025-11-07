@@ -1,17 +1,7 @@
-/* PATH: assets/css/cursor.css */
-
-.cursor-dot, .cursor-dot-outline {
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
+/* ===== cursor.css — minimal custom cursor ===== */
+.custom-cursor{
+  position:fixed;top:0;left:0;pointer-events:none;z-index:999;
+  width:18px;height:18px;border:2px solid rgba(255,255,255,.6);border-radius:50%;
+  transform:translate(-50%,-50%);opacity:.0;transition:opacity .2s ease, transform .08s ease
 }
-
-.cursor-dot {
-  width: 6px; height: 6px; background: var(--accent);
-}
-
-.cursor-dot-outline {
-  width: 28px; height: 28px; border: 1px solid rgba(225,29,72,.45);
-}
+.custom-cursor.active{opacity:.85}

@@ -1,5 +1,5 @@
-/* PATH: assets/css/project.css */
-
-.project-card .meta { color: var(--muted); }
-.project-card p { margin-top: 8px; }
-.project-card .actions { margin-top: 10px; }
+/* ===== project.css — project cards, competitions, dashboards ===== */
+.section h2{margin:.2rem 0 .9rem}
+.project-grid .card img{height:140px}
+.project-grid .card .chip{background:#1f2633}
+.section.note{color:var(--muted);font-size:.95rem}
