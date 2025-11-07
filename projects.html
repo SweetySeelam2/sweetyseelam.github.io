@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="assets/css/project.css" rel="stylesheet" />
   <link href="assets/css/main.css" rel="stylesheet" />
+  <style>
+    /* Kill any legacy avatar ring on this page */
+    .hero .avatar, .avatar { display:none !important; }
+    .cards .card img{width:100%;height:150px;object-fit:cover;border-radius:12px}
+    .tag{font-size:.75rem;border:1px solid #333;padding:.15rem .4rem;border-radius:.5rem;margin-right:.3rem}
+    .tags{margin:.4rem 0 .6rem}
+    .section-gap{margin-top:3rem}
+  </style>
 </head>
 <body class="theme-dark">
   <header class="site-header">
@@ -30,69 +38,319 @@
     </div>
   </section>
 
+  <!-- Projects -->
   <section class="projects">
     <div class="container grid cards">
 
-      <!-- Reuse/extend as needed; all thumbnails live under assets/images/project-page/ -->
+      <!-- Retail Sales Prediction -->
       <article class="card">
-        <img src="assets/images/project-page/llm-rec.jpg" alt="" />
-        <h3>Retrieve–Rank–Explain Recommender</h3>
-        <p>Hybrid LLM recommender with SHAP; embeddings + RandomForest ranker; Phi-2/Llama-3 summaries.</p>
+        <img src="assets/images/projects-images/sales-prediction-app.png" alt="">
+        <h3>Retail Sales Prediction</h3>
+        <div class="tags">
+          <span class="tag">XGBoost</span><span class="tag">Feature Eng</span><span class="tag">Tableau</span>
+        </div>
+        <p>Forecast weekly sales using RF/XGB, scenario analysis, and business narratives.</p>
         <div class="actions">
-          <a class="btn" href="https://huggingface.co/spaces/sweetyseelam/llm-product-recommender" target="_blank" rel="noopener">Demo</a>
+          <a class="btn" href="https://github.com/SweetySeelam2/Retail_Sales_Prediction" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- Amazon CNN Product Classification -->
+      <article class="card">
+        <img src="assets/images/projects-images/cnn-dl-app.png" alt="">
+        <h3>Amazon CNN Product Classification</h3>
+        <div class="tags"><span class="tag">CNN</span><span class="tag">EfficientNet</span><span class="tag">LIME</span></div>
+        <p>Image classifier for product tagging; EfficientNet + explainability for trust.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/Amazon-CNN-Product-Classification" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- Causal Inference -->
+      <article class="card">
+        <img src="assets/images/projects-images/causal_inference_app.png" alt="">
+        <h3>Causal Inference (Prime Impact)</h3>
+        <div class="tags"><span class="tag">Uplift</span><span class="tag">PSM</span><span class="tag">Streamlit</span></div>
+        <p>Estimate treatment effects and target high-impact cohorts with uplift modeling.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/Casual_Inference_streamlit" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- AutoPitchGPT -->
+      <article class="card">
+        <img src="assets/images/projects-images/llm-autopitchgpt-app.png" alt="">
+        <h3>LLM AutoPitchGPT</h3>
+        <div class="tags"><span class="tag">LLM</span><span class="tag">Prompting</span><span class="tag">Streamlit</span></div>
+        <p>Automates tailored investor pitches; reproducible sections and PDF export.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/LLM_AutoPitchGPT" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- Customer Segmentation -->
+      <article class="card">
+        <img src="assets/images/projects-images/customer-segmentation-app.png" alt="">
+        <h3>Customer Segmentation (K-Means)</h3>
+        <div class="tags"><span class="tag">K-Means</span><span class="tag">EDA</span><span class="tag">Streamlit</span></div>
+        <p>Actionable marketing clusters and KPI drill-downs.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/customer-segmentation-ML" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- Netflix Revenue Predictor -->
+      <article class="card">
+        <img src="assets/images/projects-images/revenue-predictor-app.jpg" alt="">
+        <h3>Netflix Revenue Predictor</h3>
+        <div class="tags"><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">BI</span></div>
+        <p>Predicts worldwide revenue with explainability and ROI storytelling.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/Netflix_Revenue_Predictor" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- Cancer Prediction -->
+      <article class="card">
+        <img src="assets/images/projects-images/breast-cancer-app.png" alt="">
+        <h3>Breast Cancer Prediction</h3>
+        <div class="tags"><span class="tag">LogReg</span><span class="tag">XGBoost</span><span class="tag">Explainability</span></div>
+        <p>Clinical risk prediction with SHAP & clear patient-friendly narratives.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/Cancer_Prediction_ML" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- Live data KMeans -->
+      <article class="card">
+        <img src="assets/images/projects-images/live-data-kmeans-app.png" alt="">
+        <h3>Live Data K-Means</h3>
+        <div class="tags"><span class="tag">Streaming</span><span class="tag">Clustering</span></div>
+        <p>Stream-updated clustering demo with guardrails.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/Live_data_KMeans" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- Housing -->
+      <article class="card">
+        <img src="assets/images/projects-images/house-prediction-app.png" alt="">
+        <h3>Housing Price Prediction</h3>
+        <div class="tags"><span class="tag">Regressors</span><span class="tag">EDA</span></div>
+        <p>Accurate, explainable ML for real estate pricing.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/SweetySeelam2/Housing_Price_Prediction" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <!-- LLM Rec -->
+      <article class="card">
+        <img src="assets/images/projects-images/llm-recommender-app.png" alt="">
+        <h3>LLM Retrieve–Rank–Explain Recommender</h3>
+        <div class="tags"><span class="tag">Embeddings</span><span class="tag">RandomForest</span><span class="tag">LLM</span></div>
+        <p>Hybrid recsys with SHAP-guided ranking and LLM explanations.</p>
+        <div class="actions">
           <a class="btn" href="https://github.com/SweetySeelam2/LLM_Recommendation_Amazon" target="_blank" rel="noopener">GitHub</a>
         </div>
       </article>
 
+      <!-- Fraud -->
       <article class="card">
-        <img src="assets/images/project-page/fraud.jpg" alt="" />
-        <h3>Fraud Detection with Explainable AI</h3>
-        <p>XGBoost + SHAP Streamlit app for risk scoring & business storytelling.</p>
+        <img src="assets/images/projects-images/fraud-detection-app.png" alt="">
+        <h3>Fraud Detection Analytics</h3>
+        <div class="tags"><span class="tag">XGBoost</span><span class="tag">SHAP</span></div>
+        <p>Bank-grade risk scoring with explainability & dashboard.</p>
         <div class="actions">
-          <a class="btn" href="https://customer-segmentation-ml.streamlit.app/" target="_blank" rel="noopener">Demo</a>
-          <a class="btn" href="https://github.com/SweetySeelam2/Fraud-Detection-Analytics" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://github.com/SweetySeelam2/Fraud_Detection_Analytics" target="_blank" rel="noopener">GitHub</a>
         </div>
       </article>
 
+      <!-- A/B Testing -->
       <article class="card">
-        <img src="assets/images/project-page/netflix-roi.jpg" alt="" />
-        <h3>Netflix Revenue Predictor</h3>
-        <p>ROI forecasting with SHAP, published dashboards for exec decisioning.</p>
+        <img src="assets/images/projects-images/ab-testing-app.png" alt="">
+        <h3>Marketing A/B Testing + Conversion Prediction</h3>
+        <div class="tags"><span class="tag">Hypothesis tests</span><span class="tag">LogReg</span></div>
+        <p>Guardrails + uplift; ML conversion predictor & SHAP.</p>
         <div class="actions">
-          <a class="btn" href="https://share.streamlit.io/user/sweetyseelam2" target="_blank" rel="noopener">Demo</a>
-          <a class="btn" href="https://github.com/SweetySeelam2/Netflix-Revenue-Predictor" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://github.com/SweetySeelam2/Marketing_Strategy_AB_Testing" target="_blank" rel="noopener">GitHub</a>
         </div>
       </article>
 
+      <!-- NLP Sentiment -->
       <article class="card">
-        <img src="assets/images/project-page/cancelsense.jpg" alt="" />
-        <h3>CancelSense API</h3>
-        <p>FastAPI + SHAP flight cancellation/delay predictions; Railway deploy.</p>
+        <img src="assets/images/projects-images/nlp-sentiment-analysis-app.jpg" alt="">
+        <h3>NLP Sentiment Analysis (BERT + SHAP/LIME)</h3>
+        <div class="tags"><span class="tag">Transformers</span><span class="tag">Explainability</span></div>
+        <p>IMDb sentiment with BERT; interactive explanations.</p>
         <div class="actions">
-          <a class="btn" href="https://github.com/SweetySeelam2/RevenueCat-Shipaton" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="assets/images/project-page/imdb-bert.jpg" alt="" />
-        <h3>IMDb Sentiment (BERT + SHAP/LIME)</h3>
-        <p>BERT sentiment with explainability; deployed on Hugging Face.</p>
-        <div class="actions">
-          <a class="btn" href="https://huggingface.co/spaces/sweetyseelam/bert-sentiment-imdb-app" target="_blank" rel="noopener">Demo</a>
           <a class="btn" href="https://github.com/SweetySeelam2/NLP_SentimentAnalysis" target="_blank" rel="noopener">GitHub</a>
         </div>
       </article>
 
-      <article class="card">
-        <img src="assets/images/project-page/kmeans.jpg" alt="" />
-        <h3>Customer Segmentation (K-Means)</h3>
-        <p>Marketing strategy segments—Mall customers dataset; Streamlit UX.</p>
-        <div class="actions">
-          <a class="btn" href="https://customer-segmentation-ml.streamlit.app/" target="_blank" rel="noopener">Demo</a>
-          <a class="btn" href="https://github.com/SweetySeelam2/Customer-Segmentation-KMeans" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </article>
+    </div>
+  </section>
 
+  <!-- Competitions -->
+  <section class="projects section-gap">
+    <div class="container">
+      <h2>Competitions</h2>
+      <div class="grid cards">
+
+        <article class="card">
+          <img src="assets/images/projects-images/revenuecat-medihack-app.png" alt="">
+          <h3>RevenueCat Shipaton</h3>
+          <div class="tags"><span class="tag">Mobile</span><span class="tag">Monetization</span></div>
+          <p>Subscription analytics & in-app monetization ideas.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/RevenueCat-Shipaton" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/arc-prize.png" alt="">
+          <h3>ARC Prize</h3>
+          <div class="tags"><span class="tag">Reasoning</span><span class="tag">Search</span></div>
+          <p>Multi-solver architecture & safe submission pipeline.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/ARC_Prize_Hackathon" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/trojan-horse.png" alt="">
+          <h3>Trojan Horse Hunt</h3>
+          <div class="tags"><span class="tag">Security</span><span class="tag">ML</span></div>
+          <p>Model backdoor detection & leaderboard entries.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Trojan-Horse-Hunt-Kaggle-Competition" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/gke.png" alt="">
+          <h3>GKE Devpost Hackathon</h3>
+          <div class="tags"><span class="tag">GKE</span><span class="tag">MLOps</span></div>
+          <p>Containerized ML workloads and CI basics.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/GKE_Devpost_Hackathon" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/medihack.png" alt="">
+          <h3>Medi-Hack</h3>
+          <div class="tags"><span class="tag">Healthcare</span><span class="tag">AI</span></div>
+          <p>Clinical analytics prototypes with explainability.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Medi-Hack-Devpost-Hackathon" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/bay2bay.png" alt="">
+          <h3>Bay2Bay Hacks</h3>
+          <div class="tags"><span class="tag">Civic</span><span class="tag">Data</span></div>
+          <p>Community-impact data applications.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Bay2BayHacks" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/tableau-next.png" alt="">
+          <h3>Tableau Next</h3>
+          <div class="tags"><span class="tag">Tableau</span><span class="tag">Design</span></div>
+          <p>High-polish analytics UX & storytelling.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Tableau-Next-Devpost" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/devnetwork.png" alt="">
+          <h3>DevNetwork Hackathon</h3>
+          <div class="tags"><span class="tag">APIs</span><span class="tag">Prototyping</span></div>
+          <p>Rapid prototyping with clean docs and demos.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/DevNetwork-Devpost-Hackathon" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/algofest.png" alt="">
+          <h3>AlgoFest</h3>
+          <div class="tags"><span class="tag">Algorithms</span></div>
+          <p>Competitive algorithm implementations and write-ups.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/AlgoFest-Devpost-Hackathon" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/red-teaming.png" alt="">
+          <h3>OpenAI Red-Teaming Challenge</h3>
+          <div class="tags"><span class="tag">Safety</span><span class="tag">Eval</span></div>
+          <p>gpt-oss-20b probing & mitigation proposals.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Red-Teaming-Challenge-OpenAI-gpt-oss-20b" target="_blank">Repo</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboards -->
+  <section class="projects section-gap">
+    <div class="container">
+      <h2>Dashboards (Power BI & Tableau)</h2>
+      <div class="grid cards">
+
+        <article class="card">
+          <img src="assets/images/projects-images/ab-testing-conversion-app.png" alt="">
+          <h3>Marketing A/B Testing – Conversion</h3>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">Explainability</span></div>
+          <p>KPIs, guardrails, and ML uplift integration.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Marketing_AB_Testing-Conversion_Prediction" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/dl-thumbnail-classifier-app.png" alt="">
+          <h3>Netflix Poster Prediction</h3>
+          <div class="tags"><span class="tag">Tableau</span><span class="tag">CNN</span></div>
+          <p>Poster quality & genre insights with drilldowns.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Netflix-Thumbnail-Posters-Prediction-Dashboard" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/sentiment-analysis-dashboard.png" alt="">
+          <h3>IMDb Sentiment Dashboard</h3>
+          <div class="tags"><span class="tag">Tableau</span><span class="tag">NLP</span></div>
+          <p>End-to-end NLP → BI storytelling.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/IMDB-Sentiment-Analysis-NLP-Dashboard" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/causal-inference-dashboard.png" alt="">
+          <h3>Causal Inference Dashboard</h3>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">Uplift</span></div>
+          <p>Impact analysis with cohort drillthrough.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Causal-Inference-Dashboard" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/sales-dashboard.png" alt="">
+          <h3>Retail Sales Forecasting</h3>
+          <div class="tags"><span class="tag">Power BI</span></div>
+          <p>Forecasts, stockouts, and revenue lift simulations.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Retail_Sales_Forecasting" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/customer-engagement-dashboard.png" alt="">
+          <h3>Customer Segmentation Dashboard</h3>
+          <div class="tags"><span class="tag">Power BI</span></div>
+          <p>Personas, CLV, and actioning playbooks.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Customer_Segmentation_Dashboard" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/breast-cancer-dashboard.png" alt="">
+          <h3>Breast Cancer Risk Predictor</h3>
+          <div class="tags"><span class="tag">BI</span><span class="tag">Healthcare</span></div>
+          <p>Explainable risk scoring with clinical views.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Breast-Cancer-Risk-Predictor" target="_blank">Repo</a></div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/projects-images/fraud-detection-dashboard.png" alt="">
+          <h3>Fraud Detection – Explainability</h3>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">SHAP</span></div>
+          <p>Case triage with interpretable features.</p>
+          <div class="actions"><a class="btn" href="https://github.com/SweetySeelam2/Fraud-Detection-Explainability" target="_blank">Repo</a></div>
+        </article>
+
+      </div>
     </div>
   </section>
 

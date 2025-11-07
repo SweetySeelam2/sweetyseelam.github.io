@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <title>Sweety Seelam · Tech Stack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="assets/css/techstack.css" rel="stylesheet" />
   <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/research.css" rel="stylesheet" />
 </head>
 <body class="theme-dark">
   <header class="site-header">
@@ -25,58 +25,28 @@
 
   <section class="page-title">
     <div class="container">
-      <h1>What I Use</h1>
+      <h1>Tech Stack</h1>
       <p>Languages, frameworks, libraries, and tools I use to ship ML & analytics.</p>
     </div>
   </section>
 
-  <section class="stack container">
-    <div class="stack-grid">
-      <div>
-        <h3>Languages</h3>
-        <p>Python, SQL, R</p>
-        <h3>ML / AI</h3>
-        <p>scikit-learn, XGBoost, LightGBM, TensorFlow, Keras, PyTorch, BERT, Llama-3, Phi-2</p>
-        <h3>LLM & RAG</h3>
-        <p>Embeddings (sentence-transformers), vector search, prompt engineering, retrieval pipelines, Hugging Face Spaces</p>
-      </div>
-      <div>
-        <h3>Explainability & Causal</h3>
-        <p>SHAP, LIME, A/B testing, hypothesis testing, uplift modeling, propensity score matching</p>
-        <h3>Visualization & BI</h3>
-        <p>Tableau, Power BI, Streamlit, Altair, Matplotlib</p>
-        <h3>Data & Ops</h3>
-        <p>ETL, data warehousing, CTEs & window functions, FastAPI, Railway, GitHub Actions (basic), GKE (basic)</p>
-      </div>
-      <div>
-        <h3>Domains</h3>
-        <p>Marketing analytics, forecasting, customer segmentation, fraud detection, healthcare</p>
-        <h3>Tooling</h3>
-        <p>Git, Jupyter, VS Code</p>
-      </div>
-    </div>
+  <!-- Existing chips/skill bars from techstack.js -->
+  <section class="section container">
+    <h2>At a Glance</h2>
+    <div class="tech-grid" data-tech-grid></div>
+    <div class="skill-bars section-gap" data-skill-bars></div>
   </section>
 
-  <section class="buckets container">
+  <!-- What I Use (expanded) -->
+  <section class="section container">
+    <h2>What I Use</h2>
+    <div class="grid cards" data-what-i-use></div>
+  </section>
+
+  <!-- Skill Buckets (expanded) -->
+  <section class="section container">
     <h2>Skill Buckets</h2>
-    <div class="bucket-grid">
-      <article>
-        <h4>Experimentation & Causal ML</h4>
-        <p>End-to-end A/B design, guardrails, CUPED, uplift, PSM; 20% faster deploy cycles, 5–7% engagement lift.</p>
-      </article>
-      <article>
-        <h4>Predictive & Generative AI</h4>
-        <p>Churn, fraud, recommendation systems; LLM explainers and RAG; $1.2M+ CLV impact.</p>
-      </article>
-      <article>
-        <h4>Explainability & Storytelling</h4>
-        <p>SHAP/LIME narratives, exec dashboards (Tableau/Power BI) that cut decision latency by 20%.</p>
-      </article>
-      <article>
-        <h4>Data Engineering Lite</h4>
-        <p>Python+SQL pipelines, feature stores (lightweight), deployment to Streamlit/Hugging Face/Railway.</p>
-      </article>
-    </div>
+    <div class="grid cards" data-skill-buckets></div>
   </section>
 
   <footer class="site-footer">
@@ -84,6 +54,9 @@
       © <span id="y"></span> Sweety Seelam · <a href="license.html">License</a>
     </div>
   </footer>
+
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/techstack.js"></script>
+  <script src="assets/js/techstack.extras.js"></script>
 </body>
 </html>
