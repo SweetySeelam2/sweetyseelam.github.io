@@ -1,78 +1,62 @@
-<!DOCTYPE html>
-<html lang="en" light-mode="dark">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sweety Seelam | Tech Stack</title>
+  <meta charset="utf-8" />
+  <title>Sweety Seelam · Tech Stack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Global CSS (order matters) -->
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-  <!-- Page-specific CSS -->
-  <link rel="stylesheet" href="assets/css/techstack.css">
-  <link rel="stylesheet" href="assets/css/cursor.css">
-
-  <link id="favicon" rel="icon" href="assets/images/favicon.png" type="image/png">
-  <meta name="description" content="Tech stack for Sweety Seelam — Python, SQL, ML/AI, LLMs, Tableau, Power BI." />
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/research.css" rel="stylesheet" />
 </head>
-<body class="no-scroll-preload">
-
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="container">
-      <a class="logo" href="index.html">Sweety Seelam</a>
-      <div class="links">
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Sweety Seelam</a>
+      <nav class="main-nav">
         <a href="projects.html">Projects</a>
         <a href="experience.html">Experience</a>
         <a href="research.html">Research</a>
         <a href="education.html">Education</a>
-        <a href="techstack.html">Tech Stack</a>
+        <a class="active" href="techstack.html">Tech Stack</a>
         <a href="design.html">Gallery</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <h1>Tech Stack</h1>
-      <p class="subtitle">Python · SQL · R · scikit-learn · TensorFlow · PyTorch · LLMs · Tableau · Power BI</p>
+        <a href="license.html">License</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Icons row -->
-  <section class="section">
+  <section class="page-title">
     <div class="container">
-      <h2>What I Use</h2>
-      <p class="section__desc">Languages, frameworks, libraries, and tools I use to ship ML & analytics.</p>
-
-      <div id="techIcons" class="techstacks_icons" data-techstack-icons>
-        <!-- techstack.js will populate icons -->
-      </div>
+      <h1>Tech Stack</h1>
+      <p>Languages, frameworks, libraries, and tools I use to ship ML & analytics.</p>
     </div>
   </section>
 
-  <!-- Skills / categories -->
-  <section class="section">
-    <div class="container">
-      <h2>Skill Buckets</h2>
-      <div class="grid" id="techCards" data-techstack-target>
-        <!-- techstack.js will render cards -->
-      </div>
-    </div>
+  <!-- Existing chips/skill bars from techstack.js -->
+  <section class="section container">
+    <h2>At a Glance</h2>
+    <div class="tech-grid" data-tech-grid></div>
+    <div class="skill-bars section-gap" data-skill-bars></div>
   </section>
 
-  <footer>
-    <div class="container">
-      © 2025 Sweety Seelam · <a href="mailto:sweetyseelam8@gmail.com">sweetyseelam8@gmail.com</a>
+  <!-- What I Use (expanded) -->
+  <section class="section container">
+    <h2>What I Use</h2>
+    <div class="grid cards" data-what-i-use></div>
+  </section>
+
+  <!-- Skill Buckets (expanded) -->
+  <section class="section container">
+    <h2>Skill Buckets</h2>
+    <div class="grid cards" data-skill-buckets></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container small">
+      © <span id="y"></span> Sweety Seelam · <a href="license.html">License</a>
     </div>
   </footer>
 
-  <!-- JS (order matters) -->
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/dynamicTitle.js"></script>
-  <script src="assets/js/cursor.js"></script>
-  <!-- Page-specific -->
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   <script src="assets/js/techstack.js"></script>
+  <script src="assets/js/techstack.extras.js"></script>
 </body>
 </html>

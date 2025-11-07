@@ -1,125 +1,52 @@
-<!DOCTYPE html>
-<html lang="en" light-mode="dark">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sweety Seelam | Gallery</title>
+  <meta charset="utf-8" />
+  <title>Sweety Seelam · Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Global CSS (order matters) -->
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-  <!-- Page-specific CSS -->
-  <link rel="stylesheet" href="assets/css/design.css">
-  <link rel="stylesheet" href="assets/css/cursor.css">
-
-  <link id="favicon" rel="icon" href="assets/images/favicon.png" type="image/png">
-  <meta name="description" content="UI/UX and mockup gallery by Sweety Seelam." />
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/research.css" rel="stylesheet" />
 </head>
-<body class="no-scroll-preload">
-
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="container">
-      <a class="logo" href="index.html">Sweety Seelam</a>
-      <div class="links">
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Sweety Seelam</a>
+      <nav class="main-nav">
         <a href="projects.html">Projects</a>
         <a href="experience.html">Experience</a>
         <a href="research.html">Research</a>
         <a href="education.html">Education</a>
         <a href="techstack.html">Tech Stack</a>
-        <a href="design.html">Gallery</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <h1>Gallery</h1>
-      <p class="subtitle">“Creativity takes courage.”</p>
+        <a class="active" href="design.html">Gallery</a>
+        <a href="license.html">License</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Gallery -->
-  <section class="section">
-    <div class="container container_gallery">
-
-      <div class="item1">
-        <h2>UI / UX</h2>
-        <div class="gallery_section">
-          <div class="staggered-grid">
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/1.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/2.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/3.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/4.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/5.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/6.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/7.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/ui_ux/8.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="item2">
-        <h2>Mockups</h2>
-        <div class="gallery_section">
-          <div class="staggered-grid">
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/1.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/2.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/3.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/4.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/5.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/6.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/7.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-            <div class="picture-container">
-              <a href="assets/images/designs/mockups/8.svg" target="_blank" rel="noopener noreferrer"><span>Description</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <section class="page-title">
+    <div class="container">
+      <h1>Gallery</h1>
+      <p>Selected UI/UX and product mockups that supported my apps & dashboards.</p>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      © 2025 Sweety Seelam · <a href="mailto:sweetyseelam8@gmail.com">sweetyseelam8@gmail.com</a>
+  <section class="container">
+    <h2>UI/UX</h2>
+    <div class="grid cards" data-gallery-uiux></div>
+  </section>
+
+  <section class="container section-gap">
+    <h2>Mockups</h2>
+    <div class="grid cards" data-gallery-mockups></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container small">
+      © <span id="y"></span> Sweety Seelam · <a href="license.html">License</a>
     </div>
   </footer>
 
-  <!-- JS (order matters) -->
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/dynamicTitle.js"></script>
-  <script src="assets/js/cursor.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/design.js"></script>
 </body>
 </html>

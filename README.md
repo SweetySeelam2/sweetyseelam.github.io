@@ -9,7 +9,7 @@ This website highlights real-world projects integrating **Machine Learning, Deep
 
 ## 🌐 Live Portfolio
 
-**▶️ [Portfolio Website](https://sweetyseelam2.github.io)**  
+**▶️ [Portfolio Website](https://sweetyseelam2.github.io/SweetySeelam.github.io)**  
 **▶️ [LinkedIn](https://www.linkedin.com/in/sweetyrao670/)**  
 **▶️ [GitHub](https://github.com/SweetySeelam2)**  
 **▶️ [Medium](https://medium.com/@sweetyseelam)**  
@@ -65,10 +65,8 @@ Master’s in Data Science; built and deployed multiple ML and AI projects:
 | Project | Description | Tech Stack |
 |----------|--------------|-------------|
 | [**LLM Retrieve–Rank–Explain Recommender**](https://github.com/SweetySeelam2/LLM_Recommendation_Amazon) | Hybrid recommender ( Phi-2 + Llama-3 + SHAP ); 20 % interaction lift. | LLM · Python · Streamlit |
-| [**CancelSense API**](https://github.com/SweetySeelam2/Flight-Cancellation-Delay-Prediction-API) | Flight delay prediction FastAPI service. | FastAPI · Random Forest · Railway |
 | [**Fraud Detection with Explainable AI**](https://github.com/SweetySeelam2/Fraud_Detection_Analytics) | XGBoost + SHAP Streamlit dashboard. | XGBoost · SHAP · Streamlit |
 | [**IMDb Sentiment (BERT + LIME)**](https://github.com/SweetySeelam2/NLP_SentimentAnalysis) | NLP sentiment analysis with explainability. | BERT · SHAP/LIME · Tableau |
-| [**Netflix Thumbnail Genre Classifier**](https://github.com/SweetySeelam2/Netflix_thumbnail_classifier) | CNN poster tagging model ( > 90 % accuracy ). | EfficientNet · LIME |
 | [**Netflix Revenue Predictor**](https://github.com/SweetySeelam2/NetflixRevenuePredictor) | Predicts revenue & ROI with SHAP + Tableau. | XGBoost · Tableau |
 | [**Retail Sales Prediction**](https://github.com/SweetySeelam2/Retail_Sales_Prediction) | Transaction-level forecasting & explainability. | XGBoost · SHAP · Python |
 | [**Cancer Prediction ML**](https://github.com/SweetySeelam2/Cancer_Prediction_ML) | Interpretable tumor classification model. | Logistic Regression · SHAP |
@@ -115,50 +113,54 @@ cd SweetySeelam.github.io
 
 ## 🗂️ Folder Structure
 
-├── assets/
-│   ├── css/
-│   │   ├── main.css
-│   │   ├── app.css
-│   │   ├── home.css
-│   │   ├── experience.css
-│   │   ├── project.css
-│   │   ├── education.css
-│   │   ├── research.css
-│   │   ├── design.css
-│   │   ├── techstack.css
-│   │   ├── cursor.css
-│   ├── js/
-│   │   ├── app.js
-│   │   ├── dynamicTitle.js
-│   │   ├── cursor.js
-│   │   ├── experience.js
-│   │   ├── project.js
-│   │   ├── education.js
-│   │   ├── research.js
-│   │   ├── techstack.js
-│   ├── images/
-│   │   └── projects/ (project thumbnails)
-│   └── favicon.png
-├── index.html
-├── experience.html
-├── education.html
-├── projects.html
-├── research.html
-├── design.html
-├── techstack.html
-└── README.md
+├── assets/                                                                                        
+│   ├── css/                                                                                                                    
+│   │   ├── main.css                                                                                                                                    
+│   │   ├── app.css                                                                                                                          
+│   │   ├── home.css                                           
+│   │   ├── experience.css                                                                                                                  
+│   │   ├── project.css                                                                                                                     
+│   │   ├── education.css                                                                                                                               
+│   │   ├── research.css                                                                                                                                      
+│   │   ├── design.css                                                                                                                                       
+│   │   ├── techstack.css                                                                                                                                  
+│   │   ├── cursor.css                                                                                                                                         
+│   ├── js/                                                                                                                                                    
+│   │   ├── app.js                                                                                                                                             
+│   │   ├── dynamicTitle.js                                                                                                                                 
+│   │   ├── cursor.js                                                                                                                                   
+│   │   ├── experience.js                                                                                                                          
+│   │   ├── project.js                                                                                                                                      
+│   │   ├── education.js                                                                                                                                     
+│   │   ├── research.js                                                                                                                                    
+│   │   ├── techstack.js                                                                                                                                         
+│   ├── images/                                                                                                                                                
+│   │   └── projects/ (project thumbnails)                                                                                                                       
+│   └── favicon.png                                                                                                                                                  
+├── index.html                                                                                                                                                   
+├── experience.html                                                                                                                                   
+├── education.html                                                                                                                               
+├── projects.html                                                                                                                                        
+├── research.html                                                                                                                                          
+├── design.html                                                                                                                                              
+├── techstack.html                                                                                                                                              
+└── README.md                                                                                                                   
 
 ---
 
 ## 🧑‍💼 Author
 
-Sweety Seelam
+Sweety Seelam | Business Analyst | Aspiring Data Scientist | AI Enthusiast
 
 📍 Michigan, USA
 
-📧 sweetyseelam8@gmail.com
+📧 Email: sweetyseelam8@gmail.com
 
-🔗 LinkedIn • GitHub • Medium
+🔗 [LinkedIn](https://www.linkedin.com/in/sweetyrao670/)  
+
+🔗 [GitHub](https://github.com/SweetySeelam2)
+
+🔗 [Medium](https://medium.com/@sweetyseelam)
 
 ---
 

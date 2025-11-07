@@ -1,67 +1,231 @@
-<!DOCTYPE html>
-<html lang="en" light-mode="dark">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sweety Seelam | Research & Articles</title>
+  <meta charset="utf-8" />
+  <title>Sweety Seelam · Research & Articles</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Global CSS (order matters) -->
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-  <!-- Page-specific CSS -->
-  <link rel="stylesheet" href="assets/css/research.css">
-  <link rel="stylesheet" href="assets/css/cursor.css">
-
-  <link id="favicon" rel="icon" href="assets/images/favicon.png" type="image/png">
-  <meta name="description" content="Research, articles, and write-ups by Sweety Seelam." />
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/research.css" rel="stylesheet" />
 </head>
-<body class="no-scroll-preload">
-
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="container">
-      <a class="logo" href="index.html">Sweety Seelam</a>
-      <div class="links">
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Sweety Seelam</a>
+      <nav class="main-nav">
         <a href="projects.html">Projects</a>
         <a href="experience.html">Experience</a>
-        <a href="research.html">Research</a>
+        <a class="active" href="research.html">Research</a>
         <a href="education.html">Education</a>
         <a href="techstack.html">Tech Stack</a>
         <a href="design.html">Gallery</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <h1>Research & Writing</h1>
-      <p class="subtitle">Causal inference, LLM safety, explainability, and applied ML case studies.</p>
+        <a href="license.html">License</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Articles / Papers -->
-  <section class="section">
+  <section class="page-title">
     <div class="container">
-      <h2>Publications & Articles</h2>
-      <p class="section__desc">Selected essays and dashboards from Medium & LinkedIn.</p>
-
-      <!-- JS target -->
-      <div class="grid" id="researchGrid" data-research-target></div>
+      <h1>Research & Writing</h1>
+      <p>Causal inference, LLM safety, explainability, and applied ML case studies.</p>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      © 2025 Sweety Seelam · <a href="mailto:sweetyseelam8@gmail.com">sweetyseelam8@gmail.com</a>
+  <!-- Competitions & Research (filled by research.js) -->
+  <section class="container section-gap">
+    <h2>Competitions & Research</h2>
+    <div class="grid cards" data-research-list></div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section class="container section-gap" id="articles">
+    <h2>Articles</h2>
+
+    <h3>Medium Platform</h3>
+    <p>
+      <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam">Visit Medium Profile</a>
+    </p>
+
+    <div class="grid cards">
+      <!-- All requested Medium articles as card + button -->
+      <article class="card">
+        <img src="assets/images/projects-images/dl-thumbnail-classifier-app.png" alt="">
+        <h4>Explainable CNN Product Tagging (LIME)</h4>
+        <p>E-commerce product tagging with interpretable CNNs.</p>
+        <div class="tag-row"><span class="chip">CNN</span><span class="chip">LIME</span><span class="chip">CV</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/revolutionizing-e-commerce-product-tagging-explainable-cnn-based-image-classification-with-lime-deb104b8fb84">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/ab-testing-conversion-app.png" alt="">
+        <h4>Boosting Conversions: A/B + Logistic Regression</h4>
+        <p>Guardrails, uplift, and ML for conversion lift.</p>
+        <div class="tag-row"><span class="chip">A/B</span><span class="chip">Logistic Regression</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/boosting-conversions-with-a-b-testing-logistic-regression-a-real-world-marketing-intelligence-7069f74390c9">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/causal_inference_app.png" alt="">
+        <h4>Causal Impact of Amazon Prime</h4>
+        <p>PSM + uplift to estimate true treatment effects.</p>
+        <div class="tag-row"><span class="chip">Causal</span><span class="chip">PSM</span><span class="chip">Uplift</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/causal-impact-of-amazon-prime-membership-on-customer-behavior-8a48884eea30">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/nlp-sentiment-analysis-app.jpg" alt="">
+        <h4>NLP Sentiment with BERT + SHAP</h4>
+        <p>End-to-end explainable NLP pipeline.</p>
+        <div class="tag-row"><span class="chip">BERT</span><span class="chip">SHAP</span><span class="chip">NLP</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/nlp-sentiment-classification-explainability-with-bert-and-shap-604bc998cee8">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/revenue-predictor-app.jpg" alt="">
+        <h4>Forecasting Netflix Revenue & ROI</h4>
+        <p>Title-level forecasts with SHAP narratives.</p>
+        <div class="tag-row"><span class="chip">Forecasting</span><span class="chip">XGBoost</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/forecasting-netflix-revenue-roi-with-ai-7b8fda679b80">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/llm-recommender-app.png" alt="">
+        <h4>Trustworthy LLM Recommenders</h4>
+        <p>Retrieve → Rank → Explain with dashboards.</p>
+        <div class="tag-row"><span class="chip">LLM</span><span class="chip">Recommenders</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/amazon-product-recommendation-engine-trust-model-accuracy-dashboard-693fa8ceaf7e">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/sentiment-analysis-dashboard.png" alt="">
+        <h4>IMDb Sentiment + Tableau</h4>
+        <p>From NLP model to business dashboard.</p>
+        <div class="tag-row"><span class="chip">NLP</span><span class="chip">Tableau</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/imdb-sentiment-analysis-with-nlp-tableau-abc1218f7d77">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/netflix-thumbnail-genres.png" alt="">
+        <h4>Netflix Thumbnail Genre Prediction</h4>
+        <p>Poster-based genre signals & dashboard.</p>
+        <div class="tag-row"><span class="chip">CNN</span><span class="chip">Dashboard</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/netflix-thumbnail-genre-prediction-dashboard-7493d6de652a">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/causal-inference-dashboard.png" alt="">
+        <h4>Prime Campaigns: Causal Dashboard</h4>
+        <p>Targeting via uplift & causal analytics.</p>
+        <div class="tag-row"><span class="chip">Causal</span><span class="chip">Uplift</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/amazon-prime-campaigns-causal-inference-dashboard-to-maximize-roi-minimize-wasted-spend-8e445b961adf">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/ab-testing-conversion-app.png" alt="">
+        <h4>Conversion Optimization: A/B + XAI</h4>
+        <p>Experiment design + explainable uplift.</p>
+        <div class="tag-row"><span class="chip">A/B</span><span class="chip">Explainability</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/conversion-optimization-strategy-with-a-b-testing-explainable-ai-d21b3f8cb4da">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/facebook-engagement.png" alt="">
+        <h4>Explainable AI for Facebook Engagement</h4>
+        <p>Clustering with SHAP/LIME (2025 case study).</p>
+        <div class="tag-row"><span class="chip">Clustering</span><span class="chip">SHAP</span><span class="chip">LIME</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/explainable-ai-for-facebook-engagement-a-shap-lime-powered-clustering-app-2025-case-study-38288e2028a0">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/housing-ml.png" alt="">
+        <h4>Accurate & Explainable Housing Prediction</h4>
+        <p>Transparent feature impact and pricing signals.</p>
+        <div class="tag-row"><span class="chip">Regression</span><span class="chip">SHAP</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/accurate-explainable-housing-price-prediction-with-ml-21da41ef5587">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/retail-sales-bi.png" alt="">
+        <h4>Retail Sales Forecasting with Power BI</h4>
+        <p>94.7% accuracy → $150K growth scenario planning.</p>
+        <div class="tag-row"><span class="chip">Power BI</span><span class="chip">Forecast</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/%EF%B8%8F-forecasting-retail-sales-with-power-bi-driving-150k-growth-with-94-7-accuracy-f06a35e4ede8">Read</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/netflix-strategy.png" alt="">
+        <h4>How Netflix Monetizes $18B Content</h4>
+        <p>Data strategy, ROI, and portfolio bets.</p>
+        <div class="tag-row"><span class="chip">Strategy</span><span class="chip">Analytics</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://medium.com/@sweetyseelam/how-netflix-is-using-data-science-to-monetize-its-18b-content-investment-3ceeabc3603f">Read</a>
+      </article>
+    </div>
+
+    <h3 class="section-gap">LinkedIn</h3>
+    <p>
+      <a class="btn small" target="_blank" rel="noopener" href="https://www.linkedin.com/in/sweetyrao670/recent-activity/articles/">All LinkedIn Articles</a>
+    </p>
+
+    <div class="grid cards">
+      <!-- Example LinkedIn write-ups tied to repos (buttoned) -->
+      <article class="card">
+        <img src="assets/images/projects-images/netflix-strategy.png" alt="">
+        <h4>Netflix Ad-Tier Strategy Case Study</h4>
+        <p>Economics of ad-supported tiers & retention.</p>
+        <div class="tag-row"><span class="chip">Strategy</span><span class="chip">Monetization</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://github.com/SweetySeelam2/Netflix_Ad-Tier_Strategy_CaseStudy?tab=readme-ov-file">Open</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/projects-images/viewer-retention.png" alt="">
+        <h4>Content Engagement & Viewer Retention</h4>
+        <p>Signals for churn vs. stickiness across titles.</p>
+        <div class="tag-row"><span class="chip">Retention</span><span class="chip">Cohorts</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://github.com/SweetySeelam2/Netflix_Content_Engagement_Viewer_Retention">Open</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="container section-gap" id="publications">
+    <h2>Publications</h2>
+    <p>Coming soon: submissions to TDS, arXiv, IEEE, PMI, KDnuggets, HBR, Towards Data Central, Towards AI, ACM, and MIT venues.</p>
+  </section>
+
+  <!-- CONFERENCES / WEBINARS -->
+  <section class="container section-gap" id="conferences">
+    <h2>Conferences / Webinars</h2>
+    <div class="grid cards">
+      <article class="card">
+        <img src="assets/images/projects-images/agentic-ai.png" alt="">
+        <h4>Agentic AI Conference (Data Science Dojo)</h4>
+        <p>Memory, planning, evaluation, GraphRAG, multi-agent workflows.</p>
+        <div class="tag-row"><span class="chip">Agentic AI</span><span class="chip">RAG</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://www.linkedin.com/feed/update/urn:li:activity:7361193722698502144/">Post</a>
+      </article>
+      <article class="card">
+        <img src="assets/images/projects-images/testmu.png" alt="">
+        <h4>Testμ Conference 2025</h4>
+        <p>QE in the age of AI, ADLC, observability, agent testing.</p>
+        <div class="tag-row"><span class="chip">Quality Engineering</span><span class="chip">AI</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://www.linkedin.com/feed/update/urn:li:activity:7364408669138063360/">Post</a>
+      </article>
+      <article class="card">
+        <img src="assets/images/projects-images/power-automate.png" alt="">
+        <h4>AI-Powered Automation (LLMs + Power Automate)</h4>
+        <p>LLM workflows for business process automation.</p>
+        <div class="tag-row"><span class="chip">Automation</span><span class="chip">LLM</span></div>
+        <a class="btn small" target="_blank" rel="noopener" href="https://datasciencedojo.com/tutorial/ai-powered-automation-power-automate/">Tutorial</a>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container small">
+      © <span id="y"></span> Sweety Seelam · <a href="license.html">License</a>
     </div>
   </footer>
 
-  <!-- JS (order matters) -->
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/dynamicTitle.js"></script>
-  <script src="assets/js/cursor.js"></script>
-  <!-- Page-specific -->
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   <script src="assets/js/research.js"></script>
 </body>
 </html>
