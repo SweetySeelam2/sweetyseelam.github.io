@@ -9,10 +9,39 @@
   <style>
     /* Kill any legacy avatar ring on this page */
     .hero .avatar, .avatar { display:none !important; }
-    .cards .card img{width:100%;height:150px;object-fit:cover;border-radius:12px}
-    .tag{font-size:.75rem;border:1px solid #333;padding:.15rem .4rem;border-radius:.5rem;margin-right:.3rem}
-    .tags{margin:.4rem 0 .6rem}
-    .section-gap{margin-top:3rem}
+
+    /* Card + thumbnail fixes */
+    .cards .card {
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .cards .card img {
+      width: 100%;
+      /* keep all thumbnails consistent instead of stretched */
+      aspect-ratio: 16 / 9;
+      display: block;
+      object-fit: cover;
+      /* show the top area where titles usually are */
+      object-position: center top;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .tag {
+      font-size: .75rem;
+      border: 1px solid #333;
+      padding: .15rem .4rem;
+      border-radius: .5rem;
+      margin-right: .3rem;
+    }
+
+    .tags {
+      margin: .4rem 0 .6rem;
+    }
+
+    .section-gap {
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body class="theme-dark">
@@ -79,7 +108,7 @@
 
       <!-- AutoPitchGPT -->
       <article class="card">
-        <img src="assets/images/projects-images/llm-autopitchgpt-app.png" alt="">
+        <img src="assets/images/projects-images/llm-autopitchGPT-app.png" alt="">
         <h3>LLM AutoPitchGPT</h3>
         <div class="tags"><span class="tag">LLM</span><span class="tag">Prompting</span><span class="tag">Streamlit</span></div>
         <p>Automates tailored investor pitches; reproducible sections and PDF export.</p>
