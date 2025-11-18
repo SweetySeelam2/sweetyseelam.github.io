@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en" light-mode="dark">
 <head>
   <meta charset="UTF-8" />
@@ -11,12 +11,34 @@
   <link rel="stylesheet" href="assets/css/home.css" />
   <link rel="stylesheet" href="assets/css/cursor.css" />
   <style>
-  /* Button spacing on small screens */
-  .hero-actions{
-    flex-wrap: wrap;
-    gap: .6rem;
-  }
-</style>
+    /* Hero avatar: rectangular, smaller height, less white space above head */
+    .hero .avatar{
+      width: 180px;                     /* overall width of the frame */
+      height: 220px;                    /* shorter visible height */
+      margin: 0 auto 1.5rem;
+      border: none !important;          /* kill any circle/red border from other CSS */
+      border-radius: 24px !important;   /* rounded rectangle */
+      overflow: hidden !important;      /* crop inside this frame */
+      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero .avatar img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transform: translateY(-6%);       /* move image slightly up → less white above hat */
+      display: block;
+    }
+
+    /* Button spacing on small screens */
+    .hero-actions{
+      flex-wrap: wrap;
+      gap: .6rem;
+    }
+  </style>
 </head>
 <body class="no-scroll-preload">
 
