@@ -35,11 +35,11 @@
 
 .avatar img {
   width: 140px;
-  height: 110px;            /* smaller visible height → removes white top space */
+  height: 90px;            /* smaller visible height → removes white top space */
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0,0,0,.45);
   object-fit: cover;
-  object-position: center 20%;   /* shifts crop UP slightly */
+  object-position: center 30%;   /* shifts crop UP slightly */
   display: block;
 }
 
