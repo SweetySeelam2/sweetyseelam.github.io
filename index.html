@@ -13,24 +13,24 @@
   <style>
   /* Fix: perfectly centered, true circle crop */
   .avatar{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    overflow:hidden;
-    border:4px solid #ff2d55;
-    margin:0 auto;
-    position:relative;              /* NEW: anchor for absolute centering */
+  width:180px;
+  height:180px;
+  border-radius:16px; /* Rounded square */
+  overflow:hidden;
+  border:4px solid #ff2d55;
+  margin:0 auto;
+  position:relative;
   }
 
   .avatar img{
-    position:absolute;              /* NEW: center by position */
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    min-width:100%;                 /* always fill the circle */
-    min-height:100%;
-    object-fit:cover;
-    display:block;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
   }
 
   /* Button spacing on small screens */
