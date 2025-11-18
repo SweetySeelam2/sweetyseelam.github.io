@@ -1,4 +1,4 @@
-# 🎯 Sweety Seelam — Portfolio Website
+# 🎯 Sweety Seelam - Portfolio Website
 
 > **Business Analyst | Aspiring Data Scientist | AI & ML Enthusiast | Storyteller through Data**
 
@@ -177,5 +177,6 @@ This project is open-sourced under the MIT License.
 - Original base template: Smaranjit Ghose Portfolio Theme
 
 - Custom revamp & data-driven integration by Sweety Seelam
+
 
 - Deployed on GitHub Pages and optimized for Streamlit app linking
