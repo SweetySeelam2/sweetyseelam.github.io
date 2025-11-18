@@ -1,24 +1,117 @@
 /* PATH: assets/css/home.css */
 
-/* Kill the old particles.js space and use a clean hero */
-#home, #particles-js { display:none; }
+/* Remove legacy particles area */
+#home, #particles-js { display: none; }
 
-.home-hero{
-  padding: clamp(80px, 10vw, 140px) 0 60px;
-  text-align:center;
+/* ---------- HERO ---------- */
+.hero {
+  padding: 64px 0 24px;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(250,46,102,0.12), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(0,225,255,0.08), transparent 55%);
 }
-.home-hero .title{ margin:0 0 10px; }
-.home-hero .kicker{ color:var(--muted); margin-bottom: 16px; }
-.home-hero .avatar{
-  width: clamp(140px, 14vw, 200px);
-  height: clamp(140px, 14vw, 200px);
-  border-radius: 50%;
-  object-fit: cover; object-position: center;
-  border: 3px solid var(--accent); box-shadow: var(--shadow);
-  display:block; margin: 14px auto 10px;
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  margin: 18px 0 8px;
+  font-size: clamp(32px, 4.2vw, 56px);
+}
+.hero .subtitle {
+  max-width: 1000px;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-.social-icons{
-  display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top: 10px;
+/* Hero avatar – smaller square photo with soft shadow */
+.avatar {
+  margin: 0 auto 16px;
+  display: flex;
+  justify-content: center;
 }
-.social-icons a{ text-decoration:none; }
+
+.avatar img {
+  width: 140px;               /* 👈 smaller square size */
+  height: 140px;
+  border-radius: 16px;        /* rounded square; set 0 for sharp corners */
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Buttons row */
+.hero-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- ABOUT ---------- */
+.about-blurb {
+  max-width: 1000px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 10px 0 8px;
+}
+.about-list {
+  margin-top: 10px;
+  max-width: 1000px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.about-list li { margin: 6px 0; }
+
+/* ---------- FEATURED CARDS ---------- */
+.grid.cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card {
+  background: #11151c;
+  border: 1px solid #232a36;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.card h3 { margin: 12px 0 6px; }
+.card p  { color: #b7c0cc; min-height: 48px; }
+.card .actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #2a3446;
+  color: var(--text);
+}
+.btn.primary {
+  background: #fa2e66;
+  border-color: #fa2e66;
+  color: #fff;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  padding: 36px 0;
+  color: var(--muted);
+  text-align: center;
+}
