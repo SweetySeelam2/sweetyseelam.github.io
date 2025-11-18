@@ -106,7 +106,7 @@ cd SweetySeelam.github.io
 
 # Launch locally (open index.html)
 ```
-- No build tools required — pure HTML/CSS/JS.
+- No build tools required - pure HTML/CSS/JS.
 - To deploy on GitHub Pages, enable Pages in repository → branch main → folder / (root).
 
 ---
@@ -180,4 +180,5 @@ This project is open-sourced under the MIT License.
 
 
 - Deployed on GitHub Pages and optimized for Streamlit app linking
+
 
