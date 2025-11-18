@@ -13,15 +13,6 @@ window.PortfolioProjects = (function () {
       ]
     },
     {
-      title: "CancelSense API (Flight Delays/Cancellations)",
-      meta: "FastAPI · Railway · Random Forest · SHAP",
-      img: "assets/images/cancelsense.jpg",
-      text: "Real-time delay/cancel probabilities with interpretable outputs; developer-ready.",
-      links: [
-        { label: "GitHub", href: "https://github.com/SweetySeelam2/Flight-Cancellation-Delay-Prediction-API" }
-      ]
-    },
-    {
       title: "Fraud Detection with Explainable AI",
       meta: "XGBoost · SHAP · Streamlit",
       img: "assets/images/fraud.jpg",
