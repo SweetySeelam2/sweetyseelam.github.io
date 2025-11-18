@@ -180,3 +180,4 @@ This project is open-sourced under the MIT License.
 
 
 - Deployed on GitHub Pages and optimized for Streamlit app linking
+
