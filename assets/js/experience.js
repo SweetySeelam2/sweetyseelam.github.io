@@ -1,12 +1,4 @@
-// PATH: assets/js/experience.js
 // Renders the timeline from the data below into <ol id="experience-list">
-
-const ICONS = {
-  "University of the Cumberlands": "assets/images/experience-page/cumberlands.png",
-  "Agile IT Services": "assets/images/experience-page/agile.png",
-  "Amazon": "assets/images/experience-page/amazon.png",
-  "Western Kentucky University": "assets/images/experience-page/wku.png"
-};
 
 const EXPERIENCE = [
   {
@@ -14,6 +6,7 @@ const EXPERIENCE = [
     org: "University of the Cumberlands",
     period: "Nov 2024 – Present",
     location: "Michigan, United States",
+    icon: "assets/images/experience-page/cumberlands.png",
     bullets: [
       "Pursuing a Master’s in Data Science with courses in Statistics, SQL for Data Analysis, Machine Learning with Python, and Data Visualization (Tableau, Power BI, Excel, R).",
       "Developed and executed causal inference models and experimentation frameworks to evaluate product success.",
@@ -30,6 +23,7 @@ const EXPERIENCE = [
     org: "Agile IT Services",
     period: "Feb 2024 – Oct 2024",
     location: "Michigan, United States · Remote",
+    icon: "assets/images/experience-page/agile-it-services.png",
     bullets: [
       "Designed experimentation pipelines improving conversion rates by 15% and engagement by 20%.",
       "Built ML-driven recommendation systems for personalization (≈20% higher interaction).",
@@ -43,6 +37,7 @@ const EXPERIENCE = [
     org: "Amazon",
     period: "Nov 2021 – Feb 2024",
     location: "Michigan, United States · Hybrid",
+    icon: "assets/images/experience-page/amazon.png",
     bullets: [
       "Automated Python–SQL pipelines, reducing manual reporting by 50% (~300+ hours/year).",
       "Defined experimentation KPIs and performed feature impact analysis; accelerated launches by 15%.",
@@ -55,6 +50,7 @@ const EXPERIENCE = [
     org: "Amazon",
     period: "Nov 2019 – Oct 2021",
     location: "Kentucky, United States · On-site",
+    icon: "assets/images/experience-page/amazon.png",
     bullets: [
       "Developed dashboards (Tableau/QuickSight) enabling injury trend visibility; 12% incident reduction.",
       "Built Power BI budget dashboards for a $500K+ department; reduced reporting errors by 25%.",
@@ -68,6 +64,7 @@ const EXPERIENCE = [
     org: "Western Kentucky University",
     period: "Jun 2019 – Oct 2019",
     location: "Kentucky, United States · On-site",
+    icon: "assets/images/experience-page/wku.png",
     bullets: [
       "Statistical analysis & hypothesis testing on large datasets.",
       "Automated recurring reports with SQL (40% manual workload reduction).",
@@ -79,37 +76,32 @@ const EXPERIENCE = [
 
 function renderExperience(){
   const root = document.getElementById('experience-list');
-  if(!root) return;
+  if (!root) return;
 
-  root.innerHTML = EXPERIENCE.map(item => {
-    const icon = ICONS[item.org] || "assets/images/experience-page/default.png";
-
-    return `
-      <li class="timeline-item">
-        <span class="timeline-dot"></span>
-
-        <div class="exp-card">
-          
-          <div class="exp-header">
-            <img src="${icon}" alt="${item.org} logo" class="exp-icon" />
-            <h3>${item.title}</h3>
-          </div>
-
-          <div class="org">${item.org}</div>
-          <div class="period">${item.period}</div>
-          <div class="location">${item.location}</div>
-
-          <ul>
-            ${item.bullets.map(b=>`<li>${b}</li>`).join("")}
-          </ul>
-
-          <div class="row wrap" style="margin-top:10px;">
-            ${item.tags.map(t=>`<span class="pill">${t}</span>`).join("")}
-          </div>
+  root.innerHTML = EXPERIENCE.map(item => `
+    <li class="timeline-item">
+      <span class="timeline-dot"></span>
+      <div class="exp-card">
+        
+        <div class="exp-header">
+          ${item.icon ? `<img src="${item.icon}" alt="${item.org} logo" class="exp-icon" />` : ""}
+          <h3>${item.title}</h3>
         </div>
-      </li>
-    `;
-  }).join("");
+
+        <div class="org">${item.org}</div>
+        <div class="period">${item.period}</div>
+        <div class="location">${item.location}</div>
+
+        <ul>
+          ${item.bullets.map(b => `<li>${b}</li>`).join("")}
+        </ul>
+
+        <div class="row wrap" style="margin-top:10px;">
+          ${item.tags.map(t => `<span class="pill">${t}</span>`).join("")}
+        </div>
+      </div>
+    </li>
+  `).join("");
 }
 
 document.addEventListener('DOMContentLoaded', renderExperience);
