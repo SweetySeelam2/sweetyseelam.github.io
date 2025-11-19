@@ -13,7 +13,7 @@
   const TECH_GROUPS = [
     {
       title: "Languages",
-      items: ["Python", "SQL", "R", "JavaScript (ES6+)"]
+      items: ["Python", "SQL", "R""]
     },
     {
       title: "ML / AI",
@@ -29,7 +29,7 @@
     {
       title: "LLMs / NLP",
       items: [
-        "Transformers (BERT, RoBERTa)",
+        "Transformers (BERT)",
         "Llama 3",
         "Phi-2",
         "RAG",
@@ -39,11 +39,11 @@
     },
     {
       title: "Explainability & Causal",
-      items: ["SHAP", "LIME", "A/B Testing", "Uplift Modeling", "PSM", "DoWhy / CausalML"]
+      items: ["SHAP", "LIME", "A/B Testing", "Uplift Modeling", "DoWhy / CausalML"]
     },
     {
       title: "Data / Engineering",
-      items: ["ETL", "Pandas", "Polars", "DBT (basic)", "PostgreSQL", "BigQuery (basic)"]
+      items: ["ETL", "Pandas", "BigQuery (basic)"]
     },
     {
       title: "APIs / Apps",
