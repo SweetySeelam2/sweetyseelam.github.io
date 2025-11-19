@@ -1,6 +1,13 @@
 // PATH: assets/js/experience.js
 // Renders the timeline from the data below into <ol id="experience-list">
 
+const ICONS = {
+  "University of the Cumberlands": "assets/images/experience-page/cumberlands.png",
+  "Agile IT Services": "assets/images/experience-page/agile.png",
+  "Amazon": "assets/images/experience-page/amazon.png",
+  "Western Kentucky University": "assets/images/experience-page/wku.png"
+};
+
 const EXPERIENCE = [
   {
     title: "Professional Development — Career Break (Master’s in Data Science)",
@@ -73,23 +80,36 @@ const EXPERIENCE = [
 function renderExperience(){
   const root = document.getElementById('experience-list');
   if(!root) return;
-  root.innerHTML = EXPERIENCE.map(item => `
-    <li class="timeline-item">
-      <span class="timeline-dot"></span>
-      <div class="exp-card">
-        <h3>${item.title}</h3>
-        <div class="org">${item.org}</div>
-        <div class="period">${item.period}</div>
-        <div class="location">${item.location}</div>
-        <ul>
-          ${item.bullets.map(b=>`<li>${b}</li>`).join("")}
-        </ul>
-        <div class="row wrap" style="margin-top:10px;">
-          ${item.tags.map(t=>`<span class="pill">${t}</span>`).join("")}
+
+  root.innerHTML = EXPERIENCE.map(item => {
+    const icon = ICONS[item.org] || "assets/images/experience-page/default.png";
+
+    return `
+      <li class="timeline-item">
+        <span class="timeline-dot"></span>
+
+        <div class="exp-card">
+          
+          <div class="exp-header">
+            <img src="${icon}" alt="${item.org} logo" class="exp-icon" />
+            <h3>${item.title}</h3>
+          </div>
+
+          <div class="org">${item.org}</div>
+          <div class="period">${item.period}</div>
+          <div class="location">${item.location}</div>
+
+          <ul>
+            ${item.bullets.map(b=>`<li>${b}</li>`).join("")}
+          </ul>
+
+          <div class="row wrap" style="margin-top:10px;">
+            ${item.tags.map(t=>`<span class="pill">${t}</span>`).join("")}
+          </div>
         </div>
-      </div>
-    </li>
-  `).join("");
+      </li>
+    `;
+  }).join("");
 }
 
 document.addEventListener('DOMContentLoaded', renderExperience);
