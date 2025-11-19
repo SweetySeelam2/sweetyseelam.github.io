@@ -13,7 +13,7 @@
   const TECH_GROUPS = [
     {
       title: "Languages",
-      items: ["Python", "SQL", "R", "JavaScript (ES6+)"]
+      items: ["Python", "SQL", "R""]
     },
     {
       title: "ML / AI",
@@ -29,7 +29,7 @@
     {
       title: "LLMs / NLP",
       items: [
-        "Transformers (BERT, RoBERTa)",
+        "Transformers (BERT)",
         "Llama 3",
         "Phi-2",
         "RAG",
@@ -39,11 +39,11 @@
     },
     {
       title: "Explainability & Causal",
-      items: ["SHAP", "LIME", "A/B Testing", "Uplift Modeling", "PSM", "DoWhy / CausalML"]
+      items: ["SHAP", "LIME", "A/B Testing", "Uplift Modeling", "DoWhy / CausalML"]
     },
     {
       title: "Data / Engineering",
-      items: ["ETL", "Pandas", "Polars", "DBT (basic)", "PostgreSQL", "BigQuery (basic)"]
+      items: ["ETL", "Pandas", "BigQuery (basic)"]
     },
     {
       title: "APIs / Apps",
@@ -57,17 +57,6 @@
       title: "Cloud & Dev",
       items: ["Git/GitHub", "GKE (basic)", "Docker (basic)", "CI/CD (GitHub Actions)"]
     }
-  ];
-
-  // Optional skill bars (set whatever you want shown)
-  // This section is *optional* — delete or edit freely.
-  const SKILLS = [
-    { name: "Python", level: "Expert", pct: 92 },
-    { name: "SQL", level: "Advanced", pct: 88 },
-    { name: "Machine Learning", level: "Advanced", pct: 86 },
-    { name: "LLMs / NLP", level: "Advanced", pct: 84 },
-    { name: "Tableau / Power BI", level: "Advanced", pct: 85 },
-    { name: "Experimentation / Causal", level: "Advanced", pct: 83 },
   ];
 
   // ---- 2) HELPERS ----------------------------------------------------------
