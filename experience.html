@@ -5,52 +5,58 @@
   <title>Sweety Seelam | Experience</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Global styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/app.css" />
+  <!-- Page-specific -->
   <link rel="stylesheet" href="assets/css/experience.css" />
   <link rel="stylesheet" href="assets/css/cursor.css" />
-
   <meta name="description" content="Business Analyst → ML/AI • Experimentation • Causal Inference • Dashboards" />
 </head>
 <body class="no-scroll-preload">
-
   <a class="skip-link" href="#content">Skip to content</a>
 
   <nav class="nav" aria-label="Primary">
     <div class="container">
-      <a href="index.html" class="btn">← Home</a>
-      <div class="links">
-        <a href="projects.html">Projects</a>
-        <a href="research.html">Research</a>
-        <a href="education.html">Education</a>
+      <a href="index.html" class="btn" aria-label="Go to Home">← Home</a>
+      <div class="links" role="menubar">
+        <a role="menuitem" href="projects.html">Projects</a>
+        <a role="menuitem" href="research.html">Research</a>
+        <a role="menuitem" href="education.html">Education</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
+  <!-- Avatar removed by request; clean text-only hero -->
+  <header class="hero" role="banner">
     <div class="container">
       <h1>Experience</h1>
       <p class="subtitle">Business Analyst → ML/AI • Experimentation • Causal Inference • Dashboards</p>
     </div>
   </header>
 
-  <main class="section" id="content">
+  <main class="section" id="content" tabindex="-1">
     <div class="container">
-      <ol id="experience-list" class="timeline"></ol>
+      <ol id="experience-list" class="timeline" aria-live="polite" aria-busy="false"></ol>
     </div>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     © <span id="year"></span> Sweety Seelam
   </footer>
 
+  <!-- Shared JS -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/dynamicTitle.js"></script>
   <script src="assets/js/cursor.js"></script>
+  <!-- Page JS -->
   <script src="assets/js/experience.js"></script>
-
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // keep footer year current (defensive in case app.js loads earlier)
+    (function(){
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
   </script>
 </body>
 </html>
