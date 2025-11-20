@@ -1,28 +1,91 @@
 .section {
-  padding: 80px 0;
+  padding: 70px 0;
 }
+
+.subtitle-small {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.icon-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading-icon {
+  width: 42px;
+  height: 42px;
+}
+
 .timeline-item {
   border-left: 3px solid #ff6f61;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   padding-left: 15px;
 }
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.school-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 .timeline-item h3 {
   color: #ff6f61;
-  font-size: 1.2rem;
+  margin: 0;
+  font-size: 1.25rem;
 }
+
 .timeline-item p.meta {
+  margin: 4px 0;
   color: #bbb;
-  margin-bottom: 8px;
 }
+
+.timeline-item p.description {
+  margin-top: 6px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Certifications */
 .grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
 .cert-card {
   background: #121212;
   color: #fff;
   border-radius: 10px;
-  padding: 20px;
+  padding: 22px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cert-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.cert-card p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
 }
