@@ -5,7 +5,7 @@ window.PortfolioResearch = (function () {
       title: "ARC Prize 2025 – Reasoning Systems Challenge",
       meta: "Kaggle · 2025",
       link: "https://github.com/SweetySeelam2/ARC_Prize_Hackathon",
-      img: "assets/images/projects-images/ARC-Prize2025.png",
+      img: "assets/images/projects-images/arc-prize-2025.png",
       tags: ["Meta-learning", "Reasoning", "Search"],
       desc: "Multi-solver framework for abstract reasoning and compositional generalization."
     },
@@ -53,7 +53,7 @@ window.PortfolioResearch = (function () {
       title: "NeurIPS – Open Polymer Prediction 2025",
       meta: "Kaggle · 2025",
       link: "https://www.kaggle.com/competitions/neurips-open-polymer-prediction-2025",
-      img: "assets/images/projects-images/neurlIPS-polymer-competition.png",
+      img: "assets/images/projects-images/neurlIPS-polymer-hackathon.png",
       tags: ["Materials ML", "Graph ML", "Chemistry"],
       desc: "Predicting polymer properties using graph neural networks and molecular representations."
     },
@@ -61,7 +61,7 @@ window.PortfolioResearch = (function () {
       title: "Google Code Golf 2025",
       meta: "Kaggle · 2025",
       link: "https://www.kaggle.com/competitions/google-code-golf-2025",
-      img: "assets/images/projects-images/Google-gold-code-competition.png",
+      img: "assets/images/projects-images/google-golf-code-competition.png",
       tags: ["Algorithms", "Optimization", "Programming"],
       desc: "Ultra-compressed algorithmic problem solving focused on minimal code solutions."
     }
