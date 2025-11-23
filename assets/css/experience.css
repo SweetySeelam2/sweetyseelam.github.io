@@ -36,8 +36,8 @@
 }
 
 .exp-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 80px;
   object-fit: contain;
   border-radius: 8px;
   flex-shrink: 0;
