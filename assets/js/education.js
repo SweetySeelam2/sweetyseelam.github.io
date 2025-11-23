@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Microsoft Power BI Data Analyst",
       // 🔧 IMPORTANT: no space in filename
-      icon: "assets/images/education-page/microsoft-power-bi.png",
+      icon: "assets/images/education-page/microsoft-powerbi.png",
       desc:
         "Covers data modeling, DAX, semantic models, and enterprise-ready dashboards for self-service analytics in Power BI."
     },
