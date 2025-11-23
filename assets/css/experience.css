@@ -8,12 +8,14 @@
   margin-top: 6px;
 }
 
+/* experience list */
 #experience-list { 
   list-style: none; 
   padding-left: 0; 
   margin: 0;
 }
 
+/* timeline cards */
 .exp-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -21,44 +23,45 @@
   padding: 16px;
   margin: 8px 0;
 }
-
 .exp-card h3 { 
-  margin: 0 0 6px;
+  margin: 0 0 4px; 
 }
 
+/* NEW: icon + title row */
 .exp-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 4px;
 }
 
 .exp-icon {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 80px;
   object-fit: contain;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
-.org {
-  color: var(--muted);
-  font-weight: 600;
+.exp-card .org { 
+  color: var(--muted); 
+  font-weight: 600; 
 }
-
-.period, 
-.location { 
+.exp-card .period, 
+.exp-card .location { 
   color: var(--muted); 
   font-size: 14px; 
 }
-
 .exp-card ul { 
   margin: 8px 0 0 18px; 
 }
 
+/* slight pull-up so the timeline dot aligns nicely */
 .timeline-item .exp-card { 
   margin-top: -6px; 
 }
 
-/* Remove any legacy avatar circle */
+/* Remove any legacy avatar circle styles if they existed */
 .page-hero-avatar, 
 .page-hero-avatar img, 
 .avatar { 
