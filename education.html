@@ -8,7 +8,7 @@
   <!-- Global CSS (order matters) -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/app.css">
-  <!-- Page-specific CSS (add ?v=5 to bust cache) -->
+  <!-- Page-specific CSS -->
   <link rel="stylesheet" href="assets/css/education.css?v=5">
   <link rel="stylesheet" href="assets/css/cursor.css">
 
@@ -18,22 +18,22 @@
     content="Education of Sweety Seelam — Executive Master’s in Data Science and Executive MBA in Business Data Analytics."
   />
 </head>
-<body class="no-scroll-preload">
+<body class="theme-dark">
 
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="container">
-      <a class="logo" href="index.html">Sweety Seelam</a>
-      <div class="links">
+  <!-- Unified header/nav (same structure as projects/research/etc.) -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Sweety Seelam</a>
+      <nav class="main-nav">
         <a href="projects.html">Projects</a>
         <a href="experience.html">Experience</a>
         <a href="research.html">Research</a>
-        <a href="education.html">Education</a>
+        <a href="education.html" class="active">Education</a>
         <a href="techstack.html">Tech Stack</a>
         <a href="license.html">License</a>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <!-- Hero -->
   <header class="hero">
@@ -49,12 +49,10 @@
   <section class="section">
     <div class="container">
       <h2 class="degrees-heading">
-        <!-- Inline style guarantees the header icon is large -->
         <img
           src="assets/images/education-page/degree.png"
           alt=""
           class="heading-icon"
-          style="width:72px;height:72px;object-fit:contain;"
         />
         <span>Degrees</span>
       </h2>
