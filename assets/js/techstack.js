@@ -87,16 +87,6 @@
     }
   ];
 
-  // Optional skill bars (high-level comfort levels)
-  const SKILLS = [
-    { name: "Python & ML", level: "Advanced", pct: 88 },
-    { name: "SQL & Analytics", level: "Advanced", pct: 85 },
-    { name: "LLMs / NLP", level: "Advanced", pct: 82 },
-    { name: "Experimentation & Causal", level: "Advanced", pct: 80 },
-    { name: "Dashboards (Tableau / Power BI)", level: "Advanced", pct: 84 },
-    { name: "Deployment (APIs / Apps)", level: "Intermediate+", pct: 78 }
-  ];
-
   // ---- 2) HELPERS --------------------------------------------------------
 
   const el = (tag, className, html) => {
