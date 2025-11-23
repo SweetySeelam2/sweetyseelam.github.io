@@ -4,10 +4,17 @@
   <meta charset="utf-8" />
   <title>Sweety Seelam · Tech Stack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core styles -->
   <link href="assets/css/main.css" rel="stylesheet" />
+  <!-- Shared section / grid styles (page-title, cards, etc.) -->
   <link href="assets/css/research.css" rel="stylesheet" />
+  <!-- Tech-stack specific tweaks (icons, skill bars, etc.) -->
+  <link href="assets/css/techstack.css" rel="stylesheet" />
 </head>
+
 <body class="theme-dark">
+  <!-- Global header -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">Sweety Seelam</a>
@@ -23,36 +30,49 @@
     </div>
   </header>
 
+  <!-- Page header -->
   <section class="page-title">
     <div class="container">
       <h1>Tech Stack</h1>
-      <p>Languages, frameworks, libraries, and tools I use to ship ML & analytics.</p>
+      <p>Languages, frameworks, libraries, and tools I use to ship ML &amp; analytics.</p>
     </div>
   </section>
 
+  <!-- AT A GLANCE ---------------------------------------------------------->
   <section class="section container">
     <h2>At a Glance</h2>
+
+    <!-- Grid of categories / chips -->
     <div class="tech-grid" data-tech-grid></div>
+
+    <!-- Skill levels (optional bars) -->
     <div class="skill-bars section-gap" data-skill-bars></div>
   </section>
 
+  <!-- WHAT I USE ----------------------------------------------------------->
   <section class="section container">
     <h2>What I Use</h2>
     <div class="grid cards" data-what-i-use></div>
   </section>
 
+  <!-- SKILL BUCKETS -------------------------------------------------------->
   <section class="section container">
     <h2>Skill Buckets</h2>
     <div class="grid cards" data-skill-buckets></div>
   </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container small">
       © <span id="y"></span> 2025 Sweety Seelam · <a href="license.html">License</a>
     </div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- JS renderers -->
   <script src="assets/js/techstack.js"></script>
   <script src="assets/js/techstack.extras.js"></script>
 </body>
