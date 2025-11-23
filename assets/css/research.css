@@ -29,22 +29,36 @@
 /* Default card images (competitions + Medium + LinkedIn) */
 .card img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
+  height: 200px !important;
+  object-fit: contain !important;
+  object-position: center;
+  background: #0f1216;
+  padding: 14px;
   border-radius: 10px;
-  margin-bottom: .6rem;
+  display: block;
 }
 
-/* Conferences / Webinars icons: square-ish, not trimmed */
-.conference-section .card img {
-  height: 200px;              /* taller box */
-  object-fit: contain;        /* show full icon – no cropping */
-  background: #0d0f12;        /* subtle backdrop for PNGs */
-  padding: 12px;              /* breathing room around icon */
+/* Align Conferences / Webinars section with other containers */
+#conferences .conference-section {
+  margin: 0 auto;
+}
+
+/* Only affect images inside the Conferences / Webinars cards */
+#conferences .card img {
+  height: 200px;
+  object-fit: contain;
+  object-position: center center;
+  background: #0d0f12;
+  padding: 12px;
   border-radius: 12px;
   margin-bottom: 0.8rem;
 }
-
+.conference-section .grid.cards {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px; /* Align with all above sections */
+}
 .meta {
   opacity: .8;
   font-size: .9rem;
