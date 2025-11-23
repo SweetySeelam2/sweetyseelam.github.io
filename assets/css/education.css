@@ -22,9 +22,10 @@
   margin-bottom: 6px;
 }
 .heading-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+  width: 40px;         /* bigger so it is visible */
+  height: 40px;
+  object-fit: contain; /* keep proportions */
+  image-rendering: auto;
 }
 .section__desc {
   color: var(--muted);
@@ -46,15 +47,11 @@
 }
 
 .degree-icon {
-  width: 42px;        /* reduced size */
-  height: 42px;
-  padding: 2px;       /* light padding so they don’t get clipped */
-  background: #ffffff10;
-  border-radius: 6px; /* subtle rounded square */
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 55px;              /* clearer, larger, no blur */
+  height: 55px;
+  object-fit: contain;      /* do NOT crop */
+  border-radius: 6px;       /* optional soft rounding */
+  background: transparent;  /* remove forced background */
 }
 
 .degree-icon img {
