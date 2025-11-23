@@ -37,3 +37,19 @@
   padding-left: 10px;
   line-height: 1.6;
 }
+
+.tech-grid,
+.grid.cards {
+  margin-left: auto;
+  margin-right: auto;
+}
+.tech-card {
+  background: #121212;
+  border-radius: 12px;
+}
+.grid.cards img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
