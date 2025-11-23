@@ -1,38 +1,42 @@
 /* PATH: assets/css/education.css */
 
 .section {
-  padding: 36px 0;
+  padding: 48px 0;
 }
 
-/* Reduced hero spacing */
-.hero.small-hero {
-  padding: 24px 0 10px;
+/* Hero */
+.hero {
+  padding: 48px 0 24px;
 }
-
 .hero .subtitle {
   color: var(--muted);
-  margin-top: 4px;
+  margin-top: 6px;
   max-width: 900px;
 }
 
-/* Degrees heading */
+/* Degrees heading with cap icon */
 .degrees-heading {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+.heading-icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  image-rendering: auto;
 }
 
-.heading-icon {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
+.section__desc {
+  color: var(--muted);
+  margin-bottom: 18px;
 }
 
 /* Timeline items */
 .timeline-item {
   border-left: 3px solid #ff6f61;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding-left: 15px;
 }
 
@@ -40,20 +44,28 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-bottom: 4px;
 }
 
-/* FIXED LOGO QUALITY */
+/* Bigger, clear university logos */
 .degree-icon {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 8px;
+  background: transparent;
 }
 
-/* Degree text */
+/* this selector is harmless, keep or remove */
+.degree-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .timeline-item h3 {
   color: #ff6f61;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -67,7 +79,7 @@
   margin-top: 4px;
 }
 
-/* Certifications */
+/* Certifications grid */
 .grid {
   display: grid;
   gap: 20px;
@@ -76,17 +88,41 @@
 
 .cert-card {
   background: #121212;
+  color: #fff;
   border-radius: 10px;
   padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .cert-inner {
   display: flex;
+  align-items: flex-start;
   gap: 14px;
 }
 
+/* Bigger cert icons */
 .cert-icon {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
+}
+
+.cert-card h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.cert-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Small screens tweaks */
+@media (max-width: 600px) {
+  .section {
+    padding: 36px 0;
+  }
+  .timeline-item {
+    padding-left: 12px;
+  }
 }
