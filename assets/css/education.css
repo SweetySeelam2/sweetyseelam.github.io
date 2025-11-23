@@ -1,91 +1,127 @@
+/* PATH: assets/css/education.css */
+
 .section {
-  padding: 70px 0;
+  padding: 48px 0;
 }
 
-.subtitle-small {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #ccc;
+/* Hero */
+.hero {
+  padding: 48px 0 24px;
+}
+.hero .subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+  max-width: 900px;
 }
 
-.icon-heading {
+/* Degrees heading with cap icon */
+.degrees-heading {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 6px;
 }
-
 .heading-icon {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.section__desc {
+  color: var(--muted);
+  margin-bottom: 18px;
 }
 
+/* Timeline items */
 .timeline-item {
   border-left: 3px solid #ff6f61;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
   padding-left: 15px;
 }
 
-.timeline-header {
+.degree-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 4px;
 }
 
-.school-logo {
-  width: 55px;
+.degree-icon {
+  width: 55px;         /* bigger so logos fit */
   height: 55px;
-  border-radius: 6px;
-  object-fit: cover;
+  padding: 4px;        /* ensures logos are not cut */
+  background: #ffffff12;
+  border-radius: 8px;  /* clean rounded-square look */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.degree-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* shows full icon always */
 }
 
 .timeline-item h3 {
   color: #ff6f61;
+  font-size: 1.1rem;
   margin: 0;
-  font-size: 1.25rem;
 }
 
 .timeline-item p.meta {
-  margin: 4px 0;
   color: #bbb;
+  margin: 2px 0;
 }
 
-.timeline-item p.description {
-  margin-top: 6px;
-  line-height: 1.5;
-  color: #ddd;
+.degree-desc {
+  color: var(--muted);
+  margin-top: 4px;
 }
 
-/* Certifications */
+/* Certifications grid */
 .grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .cert-card {
   background: #121212;
   color: #fff;
   border-radius: 10px;
-  padding: 22px;
+  padding: 16px 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.cert-header {
+.cert-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
 }
 
 .cert-icon {
-  width: 45px;
-  height: 45px;
-  border-radius: 6px;
-  object-fit: cover;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
-.cert-card p {
-  margin-top: 8px;
+.cert-card h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.cert-desc {
+  color: var(--muted);
   font-size: 0.95rem;
-  color: #ccc;
-  line-height: 1.5;
+}
+
+/* Small screens tweaks */
+@media (max-width: 600px) {
+  .section {
+    padding: 36px 0;
+  }
+  .timeline-item {
+    padding-left: 12px;
+  }
 }
