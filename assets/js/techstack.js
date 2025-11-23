@@ -1,135 +1,92 @@
-/* =========================================================
-   techstack.js — renders your Tech Stack chips + skill bars
-   Plugs into:
-     - <div class="tech-grid" data-tech-grid></div>
-     - <div class="skill-bars" data-skill-bars></div>  (optional)
-   Pairs with: assets/css/techstack.css + main.css
-   ========================================================= */
-
 (function () {
-  // ---- 1) DATA -------------------------------------------------------------
-
-  // Chips grouped by category (what shows in the grid)
-  const TECH_GROUPS = [
+  const WHAT_I_USE = [
     {
       title: "Languages",
-      items: ["Python", "SQL", "R""]
-    },
-    {
-      title: "ML / AI",
-      items: [
-        "Scikit-learn",
-        "XGBoost",
-        "TensorFlow",
-        "PyTorch",
-        "LightGBM",
-        "Time Series (statsmodels, prophet)"
+      img: "assets/images/techstack-page/languages.png",
+      desc: "Python for ML/ETL/apps; SQL for warehousing & analytics; R for stats & coursework; JS for UI glue.",
+      tags: ["Python", "SQL", "R", "JavaScript"],
+      links: [
+        { label: "LLM Recommender", href: "https://github.com/SweetySeelam2/LLM_Recommendation_Amazon" },
+        { label: "Netflix Revenue", href: "https://github.com/SweetySeelam2/NetflixRevenuePredictor" }
       ]
     },
     {
-      title: "LLMs / NLP",
-      items: [
-        "Transformers (BERT)",
-        "Llama 3",
-        "Phi-2",
-        "RAG",
-        "Prompt Engineering",
-        "SHAP / LIME for text"
+      title: "Frameworks",
+      img: "assets/images/techstack-page/frameworks.png",
+      desc: "TensorFlow/PyTorch for DL; scikit-learn/XGBoost/LightGBM for tabular; Streamlit/FastAPI for apps.",
+      tags: ["TensorFlow", "PyTorch", "scikit-learn", "XGBoost", "Streamlit", "FastAPI"],
+      links: [
+        { label: "BERT Sentiment", href: "https://github.com/SweetySeelam2/NLP_SentimentAnalysis" },
+        { label: "Fraud App", href: "https://github.com/SweetySeelam2/Fraud_Detection_Analytics" }
       ]
     },
     {
-      title: "Explainability & Causal",
-      items: ["SHAP", "LIME", "A/B Testing", "Uplift Modeling", "DoWhy / CausalML"]
+      title: "Libraries",
+      img: "assets/images/techstack-page/libraries.png",
+      desc: "Pandas/Polars for data; SHAP/LIME for explainability; DoWhy/EconML for causal inference; Plotly/Matplotlib for viz.",
+      tags: ["Pandas", "Polars", "SHAP", "LIME", "DoWhy", "EconML", "Plotly"],
+      links: [
+        { label: "Causal App", href: "https://github.com/SweetySeelam2/Casual_Inference_streamlit" },
+        { label: "A/B + Conversion", href: "https://github.com/SweetySeelam2/Marketing_Strategy_AB_Testing" }
+      ]
     },
     {
-      title: "Data / Engineering",
-      items: ["ETL", "Pandas", "BigQuery (basic)"]
-    },
-    {
-      title: "APIs / Apps",
-      items: ["FastAPI", "Flask", "Streamlit", "Railway", "Hugging Face Spaces"]
-    },
-    {
-      title: "Visualization",
-      items: ["Tableau", "Power BI", "Matplotlib", "Plotly", "Seaborn"]
-    },
-    {
-      title: "Cloud & Dev",
-      items: ["Git/GitHub", "GKE (basic)", "Docker (basic)", "CI/CD (GitHub Actions)"]
+      title: "Tools",
+      img: "assets/images/techstack-page/tools.png",
+      desc: "Tableau/Power BI for BI; Docker/GitHub Actions for delivery; BigQuery/Postgres for data; Hugging Face for demos.",
+      tags: ["Tableau", "Power BI", "Docker", "GitHub Actions", "BigQuery", "PostgreSQL", "Hugging Face"],
+      links: [
+        { label: "Retail Forecast BI", href: "https://medium.com/@sweetyseelam/%EF%B8%8F-forecasting-retail-sales-with-power-bi-driving-150k-growth-with-94-7-accuracy-f06a35e4ede8" },
+        { label: "HF Profile", href: "https://huggingface.co/SweetySeelam" }
+      ]
     }
   ];
 
-  // Optional skill bars (set whatever you want shown)
-  // This section is *optional* — delete or edit freely.
-  const SKILLS = [
-    { name: "Python", level: "Expert", pct: 92 },
-    { name: "SQL", level: "Advanced", pct: 88 },
-    { name: "Machine Learning", level: "Advanced", pct: 86 },
-    { name: "LLMs / NLP", level: "Advanced", pct: 84 },
-    { name: "Tableau / Power BI", level: "Advanced", pct: 85 },
-    { name: "Experimentation / Causal", level: "Advanced", pct: 83 },
+  const SKILL_BUCKETS = [
+    {
+      title: "Experimentation & Causal",
+      img: "assets/images/techstack-page/causal.png",
+      desc: "A/B testing, uplift models, and propensity scoring to drive trustworthy product decisions.",
+      tags: ["A/B", "Uplift", "PSM", "DoWhy", "EconML"],
+      links: [{ label: "Prime Causal Impact", href: "https://medium.com/@sweetyseelam/causal-impact-of-amazon-prime-membership-on-customer-behavior-8a48884eea30" }]
+    },
+    {
+      title: "Explainability",
+      img: "assets/images/techstack-page/explainability.png",
+      desc: "Model transparency for trust & adoption: SHAP/LIME across tabular, text, and vision.",
+      tags: ["SHAP", "LIME"],
+      links: [{ label: "IMDb SHAP", href: "https://medium.com/@sweetyseelam/nlp-sentiment-classification-explainability-with-bert-and-shap-604bc998cee8" }]
+    },
+    {
+      title: "Recommenders",
+      img: "assets/images/techstack-page/recsys.png",
+      desc: "Retrieve → Rank → Explain with embeddings and ML ranking for credible suggestions.",
+      tags: ["Embeddings", "Ranking", "LLM"],
+      links: [{ label: "LLM Recsys", href: "https://github.com/SweetySeelam2/LLM_Recommendation_Amazon" }]
+    },
+    {
+      title: "Computer Vision",
+      img: "assets/images/techstack-page/cv.png",
+      desc: "CNNs & transfer learning for classification; LIME-style visual explanations.",
+      tags: ["CNN", "Transfer Learning"],
+      links: [{ label: "Product Image CNN", href: "https://github.com/SweetySeelam2/Amazon-CNN-Product-Classification" }]
+    }
   ];
 
-  // ---- 2) HELPERS ----------------------------------------------------------
-
-  const el = (tag, className, html) => {
-    const n = document.createElement(tag);
-    if (className) n.className = className;
-    if (html != null) n.innerHTML = html;
-    return n;
-  };
-
-  // ---- 3) RENDERERS --------------------------------------------------------
-
-  function renderTechGrid(root) {
-    root.innerHTML = ""; // clear
-
-    TECH_GROUPS.forEach(group => {
-      const card = el("article", "card tech-card");
-      const h3 = el("h3", null, group.title);
-      const wrap = el("div", "chip-wrap");
-
-      group.items.forEach(name => {
-        const chip = el("span", "chip", name);
-        chip.title = name; // native tooltip
-        wrap.appendChild(chip);
-      });
-
-      card.appendChild(h3);
-      card.appendChild(wrap);
-      root.appendChild(card);
-    });
-  }
-
-  function renderSkillBars(root) {
-    if (!SKILLS || SKILLS.length === 0) return;
-
-    root.innerHTML = ""; // clear
-    SKILLS.forEach(s => {
-      const row = el("div", "skill");
-      const head = el("div", "head");
-      head.appendChild(el("span", null, s.name));
-      head.appendChild(el("strong", null, s.level));
-
-      const bar = el("div", "bar");
-      const fill = el("span");
-      // Use CSS custom property for width to enable transitions
-      fill.style.setProperty("--pct", `${Math.max(0, Math.min(100, s.pct))}%`);
-      bar.appendChild(fill);
-
-      row.appendChild(head);
-      row.appendChild(bar);
-      root.appendChild(row);
-    });
-  }
-
-  // ---- 4) INIT -------------------------------------------------------------
+  const card = (x) => `
+    <article class="card">
+      ${x.img ? `<img src="${x.img}" alt="${x.title}">` : ""}
+      <h3>${x.title}</h3>
+      <p>${x.desc}</p>
+      ${x.tags?.length ? `<div class="tag-row">${x.tags.map(t => `<span class="chip">${t}</span>`).join("")}</div>` : ""}
+      ${x.links?.length ? `<div class="actions" style="margin-top:.6rem">${x.links.map(l => `<a class="btn small" target="_blank" rel="noopener" href="${l.href}">${l.label}</a>`).join("")}</div>` : ""}
+    </article>
+  `;
 
   document.addEventListener("DOMContentLoaded", () => {
-    const gridRoot = document.querySelector("[data-tech-grid]");
-    const skillsRoot = document.querySelector("[data-skill-bars]");
-
-    if (gridRoot) renderTechGrid(gridRoot);
-    if (skillsRoot) renderSkillBars(skillsRoot);
+    const useRoot = document.querySelector("[data-what-i-use]");
+    if (useRoot) useRoot.innerHTML = WHAT_I_USE.map(card).join("");
+    const bucketRoot = document.querySelector("[data-skill-buckets]");
+    if (bucketRoot) bucketRoot.innerHTML = SKILL_BUCKETS.map(card).join("");
   });
 })();
