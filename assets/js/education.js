@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const eduTarget = document.querySelector("[data-education-target]");
   const certTarget = document.querySelector("[data-cert-target]");
 
+  if (!eduTarget || !certTarget) return;
+
   const degrees = [
     {
       title: "Executive Master’s in Data Science",
@@ -28,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const certs = [
     {
       name: "Microsoft Power BI Data Analyst",
-      icon: "assets/images/education-page/microsoft-powerbi.png",
+      // 🔧 IMPORTANT: no space in filename
+      icon: "assets/images/education-page/microsoft-power-bi.png",
       desc:
         "Covers data modeling, DAX, semantic models, and enterprise-ready dashboards for self-service analytics in Power BI."
     },
@@ -40,13 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  // render degrees
+  // ---- Degrees ----
   degrees.forEach(d => {
     const item = document.createElement("article");
     item.className = "timeline-item";
     item.innerHTML = `
       <div class="degree-header">
-        <img class="degree-icon" src="${d.icon}" alt="${d.school} logo">
+        <!-- inline style guarantees big, clear logo regardless of CSS conflicts -->
+        <img
+          class="degree-icon"
+          src="${d.icon}"
+          alt="${d.school} logo"
+          style="width:100px;height:100px;object-fit:contain;"
+        >
         <div>
           <h3>${d.title}</h3>
           <p class="meta">${d.school} · ${d.years}</p>
@@ -58,13 +67,19 @@ document.addEventListener("DOMContentLoaded", () => {
     eduTarget.appendChild(item);
   });
 
-  // render certs
+  // ---- Certifications ----
   certs.forEach(c => {
     const card = document.createElement("article");
     card.className = "cert-card";
     card.innerHTML = `
       <div class="cert-inner">
-        <img class="cert-icon" src="${c.icon}" alt="${c.name}">
+        <!-- inline style guarantees visible icon -->
+        <img
+          class="cert-icon"
+          src="${c.icon}"
+          alt="${c.name} icon"
+          style="width:52px;height:52px;object-fit:contain;"
+        >
         <div>
           <h4>${c.name}</h4>
           <p class="cert-desc">${c.desc}</p>
