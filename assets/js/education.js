@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const eduTarget = document.querySelector("[data-education-target]");
   const certTarget = document.querySelector("[data-cert-target]");
 
-  if (!eduTarget || !certTarget) return;
-
   const degrees = [
     {
       title: "Executive Master’s in Data Science",
@@ -30,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const certs = [
     {
       name: "Microsoft Power BI Data Analyst",
-      icon: "assets/images/education-page/microsoft-power bi.png",
+      icon: "assets/images/education-page/microsoft-powerbi.png",
       desc:
         "Covers data modeling, DAX, semantic models, and enterprise-ready dashboards for self-service analytics in Power BI."
     },
@@ -42,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  // ---- Degrees ----
+  // render degrees
   degrees.forEach(d => {
     const item = document.createElement("article");
     item.className = "timeline-item";
@@ -60,13 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
     eduTarget.appendChild(item);
   });
 
-  // ---- Certifications ----
+  // render certs
   certs.forEach(c => {
     const card = document.createElement("article");
     card.className = "cert-card";
     card.innerHTML = `
       <div class="cert-inner">
-        <img class="cert-icon" src="${c.icon}" alt="${c.name} icon">
+        <img class="cert-icon" src="${c.icon}" alt="${c.name}">
         <div>
           <h4>${c.name}</h4>
           <p class="cert-desc">${c.desc}</p>
