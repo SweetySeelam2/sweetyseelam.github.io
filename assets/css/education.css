@@ -47,8 +47,8 @@
 }
 
 .degree-icon {
-  width: 55px;              /* clearer, larger, no blur */
-  height: 55px;
+  width: 68px;              /* slightly larger for clarity */
+  height: 68px;
   object-fit: contain;      /* do NOT crop */
   border-radius: 6px;       /* optional soft rounding */
   background: transparent;  /* remove forced background */
