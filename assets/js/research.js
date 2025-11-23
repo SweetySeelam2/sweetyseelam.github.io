@@ -29,7 +29,7 @@ window.PortfolioResearch = (function () {
       title: "AlgoFest – Competitive Algorithms",
       meta: "Devpost · 2025",
       link: "https://github.com/SweetySeelam2/AlgoFest-Devpost-Hackathon",
-      img: "assets/images/projects-images/AlgoFest.png",
+      img: "assets/images/projects-images/AlgoFest-hackathon.png",
       tags: ["Algorithms"],
       desc: "High-performance algorithmic problem solving with optimized implementations."
     },
