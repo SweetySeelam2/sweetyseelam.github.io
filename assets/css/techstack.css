@@ -1,4 +1,4 @@
-/* Section padding just for this page */
+/* Section spacing just for Tech Stack page */
 .section {
   padding: 3.5rem 0;
 }
@@ -30,7 +30,7 @@
   gap: 0.4rem;
 }
 
-/* reuse .chip styling from main/research, but safe if missing */
+/* chip style (safe even if .chip is defined elsewhere) */
 .chip {
   display: inline-block;
   padding: 0.15rem 0.6rem;
@@ -77,32 +77,51 @@
   transition: width 0.6s ease;
 }
 
-/* ---------------- Cards with icons ---------------- */
+/* ---------------- Cards with banner images -------- */
 
+/* grid container shared by What I Use + Skill Buckets */
 .grid.cards {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   margin-left: auto;
   margin-right: auto;
 }
 
-/* --- Larger Icons for "What I Use" & "Skill Buckets" --- */
+/* Card body */
+.grid.cards .card {
+  background: #0f1216;
+  border-radius: 14px;
+  border: 1px solid #252525;
+  padding: 1.25rem 1.3rem 1.4rem;
+}
+
+/* Banner-style images (match Research card look) */
 .grid.cards img {
-  width: 150px;        /* increased from 70px */
-  height: 150px;       /* increased from 70px */
-  object-fit: contain;
-  margin-bottom: 15px;
+  width: 100%;
+  height: 210px;              /* tall, like your competitions images */
+  object-fit: cover;          /* crop nicely to fill banner */
+  border-radius: 12px;
+  margin-bottom: 0.9rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.92;
+  opacity: 0.96;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .grid.cards img:hover {
-  transform: scale(1.12);
+  transform: scale(1.02);
   opacity: 1;
 }
 
-/* Keep these for backwards compatibility (not required but harmless) */
+/* Tag row + small chips below each card */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+/* Legacy techstack_icons (if you ever reuse them) */
 .techstacks_icons {
   display: flex;
   flex-wrap: wrap;
