@@ -86,8 +86,8 @@
 
 /* --- Larger Icons for "What I Use" & "Skill Buckets" --- */
 .grid.cards img {
-  width: 110px;        /* increased from 70px */
-  height: 110px;       /* increased from 70px */
+  width: 150px;        /* increased from 70px */
+  height: 150px;       /* increased from 70px */
   object-fit: contain;
   margin-bottom: 15px;
   display: block;
