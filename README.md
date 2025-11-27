@@ -3,7 +3,7 @@
 > **Business Analyst | Aspiring Data Scientist | AI & ML Enthusiast | Storyteller through Data**
 
 A professional, large-scale personal portfolio showcasing **projects, experience, research, and design work** powered by HTML, CSS, and JavaScript.  
-This website highlights real-world projects integrating **Machine Learning, Deep Learning, Causal Inference, and LLMs** deployed via **Streamlit, FastAPI, and Tableau** — reflecting the hands-on expertise of Sweety Seelam.
+This website highlights real-world projects integrating **Machine Learning, Deep Learning, Causal Inference, and LLMs** deployed via **Streamlit, FastAPI, and Tableau** - reflecting the hands-on expertise of Sweety Seelam.
 
 ---
 
@@ -26,8 +26,8 @@ This website highlights real-world projects integrating **Machine Learning, Deep
 | **Education** | Executive Master’s in Data Science (University of the Cumberlands) and MBA in Business Analytics. |
 | **Projects** | End-to-end portfolio of ML, AI, NLP, and business analytics apps linked to GitHub & Streamlit. |
 | **Research** | Case studies and technical articles including causal inference and explainable AI. |
-| **Design** | UI/UX mockups, Power BI/Tableau dashboards, and creative work. |
 | **Tech Stack** | Core tools and technologies powering this portfolio. |
+| **License** | License & documentation. |
 
 ---
 
@@ -180,5 +180,6 @@ This project is open-sourced under the MIT License.
 
 
 - Deployed on GitHub Pages and optimized for Streamlit app linking
+
 
 
