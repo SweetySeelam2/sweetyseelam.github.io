@@ -33,28 +33,28 @@ This website highlights real-world projects integrating **Machine Learning, Deep
 
 ## 💼 Professional Experience
 
-**🎓 Professional Development / Career Break — University of the Cumberlands (2024–Present)**  
+**🎓 Professional Development / Career Break - University of the Cumberlands (2024–Present)**  
 Master’s in Data Science; built and deployed multiple ML and AI projects:  
 - 🧠 **Causal Inference**: estimated uplift and ROI using DoWhy & EconML.  
 - 🧮 Developed XGBoost + SHAP/LIME models for churn & fraud prediction ($1.2 M CLV impact).  
 - 📊 Built A/B testing frameworks driving 5-7 % engagement uplift.  
 - 💡 Created Tableau & Power BI dashboards linking model insights to business KPI stories.
 
-**💻 Business Analyst — Agile IT Services (2024)**  
+**💻 Business Analyst - Agile IT Services (2024)**  
 - Designed experimentation pipelines → +15 % conversions.  
 - Built personalized ML recommendation systems → +20 % engagement.  
 - Automated ETL pipelines → –40 % manual data prep.
 
-**📈 Business Analyst II — Amazon (2021 – 2024)**  
+**📈 Business Analyst II - Amazon (2021 – 2024)**  
 - Automated Python + SQL pipelines → –300 hours per year.  
 - Defined experimentation KPIs → +15 % faster feature launches.  
 - Built Power BI/Tableau dashboards → +20 % decision speed.
 
-**🏗️ EHS Specialist — Amazon (2019 – 2021)**  
+**🏗️ EHS Specialist - Amazon (2019 – 2021)**  
 - Created financial & safety dashboards → 25 % error reduction, 12 % incident drop.  
 - Automated reporting → saved 200 + man-hours annually.
 
-**🔬 Research Volunteer — Western Kentucky University (2019)**  
+**🔬 Research Volunteer - Western Kentucky University (2019)**  
 - Conducted statistical analysis & hypothesis testing.  
 - Built SQL/Tableau dashboards → 40 % reporting efficiency gain.
 
@@ -179,4 +179,5 @@ This project is open-sourced under the MIT License.
 - Custom revamp & data-driven integration by Sweety Seelam
 
 - Deployed on GitHub Pages and optimized for Streamlit app linking
+
 
