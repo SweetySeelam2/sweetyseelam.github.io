@@ -1,4 +1,4 @@
-# 🎯 Sweety Seelam — Portfolio Website
+# 🎯 Sweety Seelam - Portfolio Website
 
 > **Business Analyst | Aspiring Data Scientist | AI & ML Enthusiast | Storyteller through Data**
 
@@ -37,7 +37,7 @@ This website highlights real-world projects integrating **Machine Learning, Deep
 Master’s in Data Science; built and deployed multiple ML and AI projects:  
 - 🧠 **Causal Inference**: estimated uplift and ROI using DoWhy & EconML.  
 - 🧮 Developed XGBoost + SHAP/LIME models for churn & fraud prediction ($1.2 M CLV impact).  
-- 📊 Built A/B testing frameworks driving 5–7 % engagement uplift.  
+- 📊 Built A/B testing frameworks driving 5-7 % engagement uplift.  
 - 💡 Created Tableau & Power BI dashboards linking model insights to business KPI stories.
 
 **💻 Business Analyst — Agile IT Services (2024)**  
@@ -87,7 +87,7 @@ Master’s in Data Science; built and deployed multiple ML and AI projects:
 |-----------|--------|
 | **Languages** | Python, SQL, R |
 | **ML / AI** | TensorFlow, PyTorch, Scikit-learn, BERT, LLMs (Phi-2, Llama 3) |
-| **Explainability & Causal** | SHAP, LIME, DoWhy, EconML, A/B Testing |
+| **Explainability & Causal** | SHAP, LIME, DoWhy, A/B Testing |
 | **Visualization** | Tableau, Power BI, Streamlit, Excel |
 | **Deployment** | FastAPI, Railway, Hugging Face Spaces, GitHub Pages |
 | **Big Data / Engineering** | ETL, Data Warehousing, Window Functions |
